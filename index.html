@@ -131,7 +131,7 @@ So, ultimately, a proper underlying database should be preserved in a trustworth
   </p>
   <p>
     In 2017 we had another workshop with Bruna Calorosi and Peter Horshman in which result trapa incorporated Correspondence Protocol System and particularry it's calssification scheme to unify and normalize calssification across difrent systems and organizations.
-    https://github.com/ShangShungFoundation/protocol
+    <a href="https://github.com/ShangShungFoundation/protocol">Correspondence Protocol System at github</a>
   </p>
   <p>In april 2018 development was halted till now.</p>
 </div>
@@ -144,7 +144,7 @@ Important would be too extending administrative metadata with contractual manage
 
 <p>Another very interesting development would be incorporation of machine learning and NLP to classify material. Of course results will have to be moderated. Development that could save thousands of watching/listening hours.</p>
 
-<p>Due to its unique aproach Trempa can be usefull for other organizations dealing with multimedia items. Therefore releasing it as Open Source could benefit them and open possibility for collaboration on further improvements</p>
+<p>Due to its unique aproach Trempa can be usefull for other organizations dealing with multimedia archive. Releasing it as Open Source could benefit other institutions opening possibility for collaboration on further improvements</p>
 </div>
 <div class="section" id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
@@ -218,24 +218,7 @@ The OAIS reference model:</p>
 <li>Identifies the documentation required to communicate the archive"s purpose and interactions to interested parties.</li>
 <li>Applies the chain of custody of archived packages to ensure that documents are not inappropriately tampered with.</li>
 </ul>
-<p>The main code of TRENPA is implemented in Python, and runs on any UNIX-like system such as Linux,  BSD Unix or Mac. It may work on Windows but it has not been tested.</p>
-<p>It makes use of several third-party open source systems:</p>
-<ul class="simple">
-<li><strong><a href="https://www.postgresql.org/">PostgreSQL</a></strong>, very robust, feature reach,  open source relational database system</li>
-<li><strong><a href="https://www.djangoproject.com/">Django</a></strong>, well established Python Framework following MVC paradigm</li>
-<li><strong>Server</strong>: <a href="https://www.nginx.com/">Nginx</a></li>
-</ul>
-<hr class="docutils" />
-<ul class="simple">
-<li>Unicode support</li>
-<li>Support for both Physical and Digital Archive</li>
-<li>Flexible, hierarchical, heterogeneous collections</li>
-<li>Dublin Core basic metadata</li>
-<li>Imprecise dates</li>
-<li>Event model for multimedia recording and other event related items (photos, etc.)</li>
-<li>Support for distributed file repositories</li>
-<li>Checksum for all files</li>
-</ul>
+
 </div>
 <div class="section" id="functional-overview">
 <h2>Functional Overview<a class="headerlink" href="#functional-overview" title="Permalink to this headline">¶</a></h2>
@@ -255,6 +238,18 @@ The functional aspects of TRENPA can be summarized as follows:</p>
 <li>It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access TRENPA to check this. TRENPA should offer an automatic e-mail alerting service (subscription).</li>
 <li>A Web user interface provides easy and intuitive access to the above functionality.</li>
 </ul>
+<h3>Basic requirements</h3>
+<ul class="simple">
+<li>Unicode support</li>
+<li>Support for both Physical and Digital Archive</li>
+<li>Flexible, hierarchical, heterogeneous collections</li>
+<li>Dublin Core basic metadata</li>
+<li>Imprecise dates</li>
+<li>Event model for multimedia recording and other event related items (photos, etc.)</li>
+<li>Support for distributed file repositories</li>
+<li>Checksum for all files</li>
+</ul>
+
 </div>
 </div>
 <div class="section" id="trenpa-digital-platform-architecture">
@@ -280,13 +275,16 @@ The functional aspects of TRENPA can be summarized as follows:</p>
 <img alt="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" src="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" />
 <p>* Not all components mentined above are implemented</p>
 <h2>Trenpa Software Stack</h2>
-<p>The main code of Trenpa is implemented in Python, and runs on any UNIX-like system such as Linux, BSD Unix or Mac. It may work on Windows but it is not tested.</p>
+
+<p>The main code of TRENPA is implemented in Python, and runs on any UNIX-like system such as Linux,  BSD Unix or Mac. It may work on Windows but it has not been tested.</p>
 <p>It makes use of several third-party open source systems:</p>
 <ul class="simple">
-<li><strong>PostgreSQL</strong>, an open source relational database system</li>
-<li><strong>Django</strong>, mature open source Python Framework</li>
-<li><strong>Server</strong>: Apache, LighHttp, etc</li>
+<li><strong><a href="https://www.postgresql.org/">PostgreSQL</a></strong>, very robust, feature reach,  open source relational database system</li>
+<li><strong><a href="https://www.djangoproject.com/">Django</a></strong>, well established Python Framework following MVC paradigm</li>
+<li><strong>Server</strong>: <a href="https://www.nginx.com/">Nginx</a></li>
 </ul>
+
+
 <p>It’s important to state that trenpa at this moment do not expose any files in internet it only works with metadata. For practical, financial and security reasons all ara is stored in two IDM  servers in merigar with very limited access. It would be financially prohibitive to pay for storing 70TB of data in any cloud storage. Not mentioning exposing it to unnecessary risk of unauthorized access, leak etc.
 </p>
 <p>If stakeholders will find id opportune it’s possible to develop delivery service which on demand can transcode multimedia material, publish it to the trenpa internet repository. 
