@@ -117,7 +117,7 @@ So, ultimately, a proper underlying database should be preserved in a trustworth
 <div class="section" id="metadata">
   <h2>History</h2>
   <p>The idea of Trempa born during The Digital Preservation of Cultural Heritage – Towards Best Practice March 2013 in Arcidosso organised by SSF directed by Alex Siedlecki.
-  At conference  prominent academics and developers from all over the world met to discuss current technological advances on islandora digital archive system.</p>
+  At conference  prominent academics (among them <a href="http://digitalpioneers.library.du.edu/thorntonStaples.html">Thornton Staples</a>) and developers from all over the world met to discuss current technological advances on islandora digital archive system.</p>
   
   <p>Since current digital archive systems are concentrated on exposing particular object event centric approach seems more suited for multimedia recordings of particular event. In similar fasshon there is the trend to express metadata in atomic way. In event centric approach in contrary relation between metadata plays a central role.
   </p>
@@ -174,6 +174,25 @@ This way even temporary, geographically despaired and complex events can be easi
 <li>semantic - tag describing the <em>topic</em> of a given scene</li>
 <li>situational - describes a change of situation</li>
 </ul>
+</div>
+<div class="section" id="Trenpa-data-model">
+  <h2>Trenpa Simplified Data Model<a class="headerlink" href="#Trenpa-data-model" title="Permalink to this headline">¶</a></h2>
+  <img alt="https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;amp;h=686" src="https://docs.google.com/drawings/d/e/2PACX-1vT0yfnw6m5yBxiZeiE4b-3n7URQpGBIJhFI9o7acZh5qBZzkV_O-W7wPlWZK6aCtMxDKnCtf3osky3s/pub?w=1418&h=1200" />
+</div>
+<div class="section" id="oais">
+  <h2>Event lists in Trenpa</h2>
+  <p>Event is main and highest organizational principle of metadata in Trenpa Archival System. All corresponding physical and digital archival items should be related to it.</p>
+  <p>Therefore elaborating event list is fundamental to organize archival items around events.</p>
+  <p>Following timelines has been developed.</p>
+  <oll>
+    <li><strong>ChNN events</strong> - In the beginning of 2015 Full timeline of Chogyal Namkhai Norbu vents  has been recreated from early 60ties til now. More than 1000 events has been classified and cross checked and referenced. </li>
+    <li>
+      <strong>SSI events</strong> - In second half of 2015 about 587  events related international SSI events has been inserted. On that occasion the entire collections of  “Merigar Letter”,  the first  Dzogchen Community monthly  periodic (from April 1982 to July 2012) and “Merigar”,  Tibetan and Western  cultural magazine (from July 1987 to May 1991) have been brought  together. Both collections are now available for consultation in Merigar Library.
+    </li>
+    <li>
+      <strong>IDC Events</strong> - has 606 events. There far more events to be inserted. We hope that this will happen in future with collaboration of respective Gars and Lings. 
+    </li>
+  </ol>
 </div>
 <div class="section" id="oais">
 <h2>OAIS<a class="headerlink" href="#oais" title="Permalink to this headline">¶</a></h2>
@@ -254,14 +273,12 @@ The functional aspects of TRENPA can be summarized as follows:</p>
 <li>It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access Trenpa to check this. Trenpa should offer an automatic e-mail alerting service (subscription)</li>
 <li>A Web user interface provides access to the above functionality</li>
 </ul>
-<div class="section" id="Trenpa-data-model">
-<h2>Trenpa Data Model<a class="headerlink" href="#Trenpa-data-model" title="Permalink to this headline">¶</a></h2>
-<img alt="https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;amp;h=686" src="https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;amp;h=686" />
-</div>
+
 <div class="section" id="Trenpa-system-architecture">
-<h2>Trenpa System Architecture<a class="headerlink" href="#Trenpa-system-architecture" title="Permalink to this headline">¶</a></h2>
+<h2>Trenpa desired System Architecture<a class="headerlink" href="#Trenpa-system-architecture" title="Permalink to this headline">¶</a></h2>
 <img alt="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" src="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" />
-<p>Trenpa Platform System Scheme</p>
+<p>* Not all components mentined above are implemented</p>
+<h2>Trenpa Software Stack</h2>
 <p>The main code of Trenpa is implemented in Python, and runs on any UNIX-like system such as Linux, BSD Unix or Mac. It may work on Windows but it is not tested.</p>
 <p>It makes use of several third-party open source systems:</p>
 <ul class="simple">
@@ -273,13 +290,13 @@ The functional aspects of TRENPA can be summarized as follows:</p>
 </p>
 <p>If stakeholders will find id opportune it’s possible to develop delivery service which on demand can transcode multimedia material, publish it to the trenpa internet repository. 
   Process this could be offered for free or can have small single fee (or monthly sunscription fee).</p>
-<p>Proposal of Trenpa Digital Platform Architecture</p>
+<h3>Proposal of Trenpa Digital Platform Architecture</h3>
 <img alt="https://docs.google.com/drawings/d/1MrMSM9nlXRq42VF9qyPA6SY6wL-dnseJ8eE7NUQHFzk/pub?w=796&amp;amp;h=575" src="https://docs.google.com/drawings/d/1MrMSM9nlXRq42VF9qyPA6SY6wL-dnseJ8eE7NUQHFzk/pub?w=796&amp;amp;h=575" />
-<p>TRENPA Digital Platform Architecture consist of:</p>
+<p>TRENPA Digital Platform Architecture may consist of:</p>
 <ol class="arabic simple">
 <li><strong>Intranet</strong>. Protected area where only authorized staff has access and can operate. It stores all archive items and its metadata.<ul>
 <li><strong>File Repository</strong> - protected digital file storage/s where original files are stored.</li>
-<li><strong>Archive Master</strong> - Master Postresql database. All physical and digital archive data is stored here.</li>
+<li><strong>Archive Master</strong> - Master database. All physical and digital archive data is stored here.</li>
 <li><strong>Job Queue</strong> - Automatized bot executing programmed jobs on various components of the TRENPA platform.</li>
 <li><strong>Transcode Servers</strong> - Dedicated servers for executing multimedia transcoding jobs.</li>
 <li><strong>File Backup</strong> - off site backup copy of &#8216;File Repository&#8217; and &#8216;Archive Master&#8217;.</li>
@@ -295,6 +312,8 @@ The functional aspects of TRENPA can be summarized as follows:</p>
 </li>
 </ol>
 </div>
+<p>Possible digal item delivery flow</p>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vQhHb3hJdCcHj3SM8iwqAp3PJ4yprgDZWB4wtS79s4yoeX4pHZYIWPeZKJaKWd2kxE89z5OnUQkPrbT/pub?w=1001&h=763" alt="">
 <div class="section" id="other-software">
 <h2>Other Software<a class="headerlink" href="#other-software" title="Permalink to this headline">¶</a></h2>
 <p>Must be mentioned that TRENPA is inspired and implements proved solutions which can be found in open source software like DSpace <a class="footnote-reference" href="#id30" id="id8">[21]</a> or Fedora <a class="footnote-reference" href="#id29" id="id9">[20]</a></p>
@@ -451,7 +470,7 @@ The functional aspects of TRENPA can be summarized as follows:</p>
 <ul class="simple">
 <li>Bruna Colarossi - former Director of Sovrintendenza Archivistica within the Italian Ministry of Culture</li>
 <li>Peter Horsman - Archive Sciences Professor at the University of Amsterdam and Government Consultant in relation to Archival Projects within the European Commission</li>
-<li>Thornton Staples</li>
+<li><a href="http://digitalpioneers.library.du.edu/thorntonStaples.html">Thornton Staples</a> - Director of the Office of Research Information Services at the Smithsonian Institution</li>
 </ul>
 </div>
 <div class="section" id="author">
