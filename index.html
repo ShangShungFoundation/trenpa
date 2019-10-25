@@ -146,6 +146,39 @@ Important would be too extending administrative metadata with contractual manage
 
 <p>Due to its unique aproach Trempa can be usefull for other organizations dealing with multimedia archive. Releasing it as Open Source could benefit other institutions opening possibility for collaboration on further improvements</p>
 </div>
+
+<div class="section" id="functional-overview">
+  <h2>Functional Requirements Overview<a class="headerlink" href="#functional-overview" title="Permalink to this headline">¶</a></h2>
+  <p
+  The functional aspects of TRENPA can be summarized as follows:</p>
+  <ul class="simple">
+  <li>A data model for basic organization of data is defined.</li>
+  <li>Metadata  of various types is stored by the system.</li>
+  <li>The system stores information about users of the system. Some users might not be humans but other computerized systems.</li>
+  <li>While much of the effort is concerned with easing access to an institution"s digital material, simply allowing full public access is not always acceptable.  Additionally functions such as depositing and reviewing must be restricted to appropriate individuals. Hence the system includes an authorization function.</li>
+  <li>All relevant actions on the archive content should be logged together with detailed description of resulting change.</li>
+  <li>The system must be able to accept incoming material (ingestion).</li>
+  <li>Some communities may require that material or accompanying metadata entering the archive be checked or arugmented by designated individuals (moderators). This process is called work-flow.</li>
+  <li>In order that material in the archive may be cited and accessed using information in a citation globally unique persistent identifiers are assigned to archived objects ("items").</li>
+  <li>End users should be able to explore and discover the contents of the repository. To this end, TRENPA must offer search and browse functions.</li>
+  <li>TRENPA should enable collaboration of diverse communities on ingestion, cataloguing, metadata enrichment (<em>crowd-sourcing</em>) together with tools for community moderation and content and metadata quality controll etc </li>
+  <li>It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access TRENPA to check this. TRENPA should offer an automatic e-mail alerting service (subscription).</li>
+  <li>A Web user interface provides easy and intuitive access to the above functionality.</li>
+  </ul>
+  <h3>Basic requirements</h3>
+  <ul class="simple">
+  <li>Unicode support</li>
+  <li>Support for both Physical and Digital Archive</li>
+  <li>Flexible, hierarchical, heterogeneous collections</li>
+  <li>Dublin Core basic metadata</li>
+  <li>Imprecise dates</li>
+  <li>Event model for multimedia recording and other event related items (photos, etc.)</li>
+  <li>Support for distributed file repositories</li>
+  <li>Checksum for all files</li>
+  </ul>
+  
+  </div>
+
 <div class="section" id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
 <img alt="https://docs.google.com/drawings/d/151xCNr744f9vpALI7x7czYQeaUwvxGQjObDWUX1tIdk/pub?w=868&amp;amp;h=730" src="https://docs.google.com/drawings/d/151xCNr744f9vpALI7x7czYQeaUwvxGQjObDWUX1tIdk/pub?w=868&amp;amp;h=730" style="width: 70%"/>
@@ -220,55 +253,8 @@ The OAIS reference model:</p>
 </ul>
 
 </div>
-<div class="section" id="functional-overview">
-<h2>Functional Overview<a class="headerlink" href="#functional-overview" title="Permalink to this headline">¶</a></h2>
-<p
-The functional aspects of TRENPA can be summarized as follows:</p>
-<ul class="simple">
-<li>A data model for basic organization of data is defined.</li>
-<li>Metadata  of various types is stored by the system.</li>
-<li>The system stores information about users of the system. Some users might not be humans but other computerized systems.</li>
-<li>While much of the effort is concerned with easing access to an institution"s digital material, simply allowing full public access is not always acceptable.  Additionally functions such as depositing and reviewing must be restricted to appropriate individuals. Hence the system includes an authorization function.</li>
-<li>All relevant actions on the archive content should be logged together with detailed description of resulting change.</li>
-<li>The system must be able to accept incoming material (ingestion).</li>
-<li>Some communities may require that material or accompanying metadata entering the archive be checked or arugmented by designated individuals (moderators). This process is called work-flow.</li>
-<li>In order that material in the archive may be cited and accessed using information in a citation globally unique persistent identifiers are assigned to archived objects ("items").</li>
-<li>End users should be able to explore and discover the contents of the repository. To this end, TRENPA must offer search and browse functions.</li>
-<li>TRENPA should enable collaboration of diverse communities on ingestion, cataloguing, metadata enrichment (<em>crowd-sourcing</em>) together with tools for community moderation and content and metadata quality controll etc </li>
-<li>It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access TRENPA to check this. TRENPA should offer an automatic e-mail alerting service (subscription).</li>
-<li>A Web user interface provides easy and intuitive access to the above functionality.</li>
-</ul>
-<h3>Basic requirements</h3>
-<ul class="simple">
-<li>Unicode support</li>
-<li>Support for both Physical and Digital Archive</li>
-<li>Flexible, hierarchical, heterogeneous collections</li>
-<li>Dublin Core basic metadata</li>
-<li>Imprecise dates</li>
-<li>Event model for multimedia recording and other event related items (photos, etc.)</li>
-<li>Support for distributed file repositories</li>
-<li>Checksum for all files</li>
-</ul>
 
-</div>
-</div>
-<div class="section" id="trenpa-digital-platform-architecture">
-<h1>TRENPA Digital Platform Architecture<a class="headerlink" href="#trenpa-digital-platform-architecture" title="Permalink to this headline">¶</a></h1>
-<p>The functional aspects of Trenpa can be summarized as follows:</p>
-<ul class="simple">
-<li>A data model for basic organization of data is defined</li>
-<li>Metadata of various types is stored by the system</li>
-<li>The system stores information about users of the system. Some users might not be humans but other computerized systems</li>
-<li>While much of the effort is concerned with easing access to an institution’s digital material, simply allowing full public access is not always acceptable. Additionally functions such as depositing and reviewing must be restricted to appropriate individuals. Hence the system includes an authorization function</li>
-<li>All relevant actions on the archive content should be logged together with detailed description of resulting change</li>
-<li>The system must be able to accept incoming material (ingestion)</li>
-<li>Some communities may require that material or accompanying metadata entering the archive be checked or augmented by designated individuals. This process is called workflow</li>
-<li>In order that material in the archive may be cited and accessed using information in a citation globally unique persistent identifiers are assigned to archived objects (‘items’).</li>
-<li>End users should be able to explore and discover the contents of the repository. To this end, Trenpa must offer search and browse functions</li>
-<li>Trenpa should enable diverse communities collaboration on ingestion, cataloging, metadata enrichment (<em>crowd-sourcing</em>) together with tools for community moderation and content curration.</li>
-<li>It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access Trenpa to check this. Trenpa should offer an automatic e-mail alerting service (subscription)</li>
-<li>A Web user interface provides access to the above functionality</li>
-</ul>
+
 
 <div class="section" id="Trenpa-system-architecture">
 <h2>Trenpa desired System Architecture<a class="headerlink" href="#Trenpa-system-architecture" title="Permalink to this headline">¶</a></h2>
@@ -287,9 +273,10 @@ The functional aspects of TRENPA can be summarized as follows:</p>
 
 <p>It’s important to state that trenpa at this moment do not expose any files in internet it only works with metadata. For practical, financial and security reasons all ara is stored in two IDM  servers in merigar with very limited access. It would be financially prohibitive to pay for storing 70TB of data in any cloud storage. Not mentioning exposing it to unnecessary risk of unauthorized access, leak etc.
 </p>
+<h3>Proposal of Trenpa Digital Platform Architecture</h3>
 <p>If stakeholders will find id opportune it’s possible to develop delivery service which on demand can transcode multimedia material, publish it to the trenpa internet repository. 
   Process this could be offered for free or can have small single fee (or monthly sunscription fee).</p>
-<h3>Proposal of Trenpa Digital Platform Architecture</h3>
+
 <img alt="https://docs.google.com/drawings/d/1MrMSM9nlXRq42VF9qyPA6SY6wL-dnseJ8eE7NUQHFzk/pub?w=796&amp;amp;h=575" src="https://docs.google.com/drawings/d/1MrMSM9nlXRq42VF9qyPA6SY6wL-dnseJ8eE7NUQHFzk/pub?w=796&amp;amp;h=575" />
 <p>TRENPA Digital Platform Architecture may consist of:</p>
 <ol class="arabic simple">
