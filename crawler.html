@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>crawler package &mdash; DRENPA beta documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DRENPA beta documentation" href="index.html" />
+    <link rel="next" title="digital_archive package" href="digital_archive.html" />
+    <link rel="prev" title="archive package" href="archive.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="digital_archive.html" title="digital_archive package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="archive.html" title="archive package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">DRENPA beta documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="crawler-package">
+<h1>crawler package<a class="headerlink" href="#crawler-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-crawler.check_backup">
+<span id="crawler-check-backup-module"></span><h2>crawler.check_backup module<a class="headerlink" href="#module-crawler.check_backup" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="crawler.check_backup.checksum_check">
+<tt class="descclassname">crawler.check_backup.</tt><tt class="descname">checksum_check</tt><big>(</big><em>original_checksum</em>, <em>file_path</em><big>)</big><a class="headerlink" href="#crawler.check_backup.checksum_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests if the file&#8217;s checksum matches the original checksum</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crawler.check_backup.do_check_backup">
+<tt class="descclassname">crawler.check_backup.</tt><tt class="descname">do_check_backup</tt><big>(</big><em>load_files_to_be_checked</em>, <em>storage_id</em>, <em>db_directory_path</em>, <em>backup_directory_path</em>, <em>test_checksum=None</em><big>)</big><a class="headerlink" href="#crawler.check_backup.do_check_backup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks, whether for all the metadata stored in database exists
+the files in a directory</p>
+<blockquote>
+<div>load_files_to_be_checked - function that given a path
+will retrieve the list of files to be checked
+storage_id - check files retrieved from this storage
+db_directory_path - all the files, that are directly or indirectly
+in this directory, that means has this prefix in its path will be checked
+for existence backup_directory_path - directory, where
+the backed up files are stored.
+test_checksum - optional hint, whether the program
+should check the checksum for the files</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="crawler.check_backup.load_files_to_be_checked">
+<tt class="descclassname">crawler.check_backup.</tt><tt class="descname">load_files_to_be_checked</tt><big>(</big><em>db_directory_path</em>, <em>storage_id</em><big>)</big><a class="headerlink" href="#crawler.check_backup.load_files_to_be_checked" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crawler.check_backup.perform_check">
+<tt class="descclassname">crawler.check_backup.</tt><tt class="descname">perform_check</tt><big>(</big><em>local_file_path</em>, <em>original_checksum</em>, <em>checksum_check</em><big>)</big><a class="headerlink" href="#crawler.check_backup.perform_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a path, check the file for existence, maybe checksum?</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crawler.check_backup.process_result">
+<tt class="descclassname">crawler.check_backup.</tt><tt class="descname">process_result</tt><big>(</big><em>result_list</em><big>)</big><a class="headerlink" href="#crawler.check_backup.process_result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes the result list and counts the number of successfully
+backed up files and gathers the not found.</p>
+<p>result_list - list of True or path</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-crawler.compute_hash">
+<span id="crawler-compute-hash-module"></span><h2>crawler.compute_hash module<a class="headerlink" href="#module-crawler.compute_hash" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="crawler.compute_hash.md5sum">
+<tt class="descclassname">crawler.compute_hash.</tt><tt class="descname">md5sum</tt><big>(</big><em>filename</em>, <em>blocksize=65536</em><big>)</big><a class="headerlink" href="#crawler.compute_hash.md5sum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-crawler.crawler">
+<span id="crawler-crawler-module"></span><h2>crawler.crawler module<a class="headerlink" href="#module-crawler.crawler" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="crawler.crawler.get_db_file">
+<tt class="descclassname">crawler.crawler.</tt><tt class="descname">get_db_file</tt><big>(</big><em>storage_id</em>, <em>file_path</em><big>)</big><a class="headerlink" href="#crawler.crawler.get_db_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crawler.crawler.get_db_file_info">
+<tt class="descclassname">crawler.crawler.</tt><tt class="descname">get_db_file_info</tt><big>(</big><em>storage_id</em>, <em>file_path</em><big>)</big><a class="headerlink" href="#crawler.crawler.get_db_file_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crawler.crawler.get_file_data">
+<tt class="descclassname">crawler.crawler.</tt><tt class="descname">get_file_data</tt><big>(</big><em>dir_path</em>, <em>file_name</em><big>)</big><a class="headerlink" href="#crawler.crawler.get_file_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crawler.crawler.json_serial">
+<tt class="descclassname">crawler.crawler.</tt><tt class="descname">json_serial</tt><big>(</big><em>obj</em><big>)</big><a class="headerlink" href="#crawler.crawler.json_serial" title="Permalink to this definition">¶</a></dt>
+<dd><p>JSON serializer for objects not serializable by default json code</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crawler.crawler.print_data">
+<tt class="descclassname">crawler.crawler.</tt><tt class="descname">print_data</tt><big>(</big><em>**out</em><big>)</big><a class="headerlink" href="#crawler.crawler.print_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crawler.crawler.publish_data_to_db">
+<tt class="descclassname">crawler.crawler.</tt><tt class="descname">publish_data_to_db</tt><big>(</big><big>)</big><a class="headerlink" href="#crawler.crawler.publish_data_to_db" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crawler.crawler.publish_data_to_server">
+<tt class="descclassname">crawler.crawler.</tt><tt class="descname">publish_data_to_server</tt><big>(</big><em>publish_url</em><big>)</big><a class="headerlink" href="#crawler.crawler.publish_data_to_server" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="crawler.crawler.traverse_from_directory">
+<tt class="descclassname">crawler.crawler.</tt><tt class="descname">traverse_from_directory</tt><big>(</big><em>mode</em>, <em>storage</em>, <em>directory</em>, <em>start_after_dir=None</em><big>)</big><a class="headerlink" href="#crawler.crawler.traverse_from_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>mode - Test will print the metadata to out, Production will send
+the data to serverstorage 
+- storage_id from DB directory 
+- initial directory
+start_after_dir - directory where last job stopped and has to be reinitiated</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-crawler.hachoirparser">
+<span id="crawler-hachoirparser-module"></span><h2>crawler.hachoirparser module<a class="headerlink" href="#module-crawler.hachoirparser" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="crawler.hachoirparser.get_metadata_hachoir">
+<tt class="descclassname">crawler.hachoirparser.</tt><tt class="descname">get_metadata_hachoir</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#crawler.hachoirparser.get_metadata_hachoir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="crawler-prod-check-backup-module">
+<h2>crawler.prod_check_backup module<a class="headerlink" href="#crawler-prod-check-backup-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="crawler-test-check-backup-module">
+<h2>crawler.test_check_backup module<a class="headerlink" href="#crawler-test-check-backup-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-crawler.tika_parser">
+<span id="crawler-tika-parser-module"></span><h2>crawler.tika_parser module<a class="headerlink" href="#module-crawler.tika_parser" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="crawler.tika_parser.get_metadata_tika">
+<tt class="descclassname">crawler.tika_parser.</tt><tt class="descname">get_metadata_tika</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#crawler.tika_parser.get_metadata_tika" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses data for file, will return a dict with two keys: metadata, content</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="crawler.tika_parser.translate_tika_to_hachoir">
+<tt class="descclassname">crawler.tika_parser.</tt><tt class="descname">translate_tika_to_hachoir</tt><big>(</big><em>metadata</em><big>)</big><a class="headerlink" href="#crawler.tika_parser.translate_tika_to_hachoir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Since the keys for same values have different names in both tika and hachoir,
+we want to convert them to one name.</p>
+<dl class="docutils">
+<dt>For example:</dt>
+<dd>tika has field: &#8220;Content-Type&#8221;: &#8220;application/pdf&#8221;
+hachoir has field: &#8220;mime_type&#8221;: &#8220;image/jpeg&#8221;
+=&gt;
+both the values will be under the &#8220;mime_type&#8221;</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-crawler">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-crawler" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">DRENPA</a></h1>
+
+
+
+
+
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=&repo=&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="archive.html">archive package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">crawler package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crawler.check_backup">crawler.check_backup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crawler.compute_hash">crawler.compute_hash module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crawler.crawler">crawler.crawler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crawler.hachoirparser">crawler.hachoirparser module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#crawler-prod-check-backup-module">crawler.prod_check_backup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#crawler-test-check-backup-module">crawler.test_check_backup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crawler.tika_parser">crawler.tika_parser module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-crawler">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="digital_archive.html">digital_archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drenpa.html">drenpa package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">events package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ingestion.html">ingestion package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physical_archive.html">physical_archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository.html">repository package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">storage package</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Shang Shung Fundation.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.2.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.6.3</a>
+      
+      |
+      <a href="_sources/crawler.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>

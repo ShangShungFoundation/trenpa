@@ -1,0 +1,627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>digital_archive package &mdash; DRENPA beta documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DRENPA beta documentation" href="index.html" />
+    <link rel="next" title="drenpa package" href="drenpa.html" />
+    <link rel="prev" title="crawler package" href="crawler.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="drenpa.html" title="drenpa package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="crawler.html" title="crawler package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">DRENPA beta documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="digital-archive-package">
+<h1>digital_archive package<a class="headerlink" href="#digital-archive-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-digital_archive.admin">
+<span id="digital-archive-admin-module"></span><h2>digital_archive.admin module<a class="headerlink" href="#module-digital_archive.admin" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="digital_archive.admin.AudioItemAdmin">
+<em class="property">class </em><tt class="descclassname">digital_archive.admin.</tt><tt class="descname">AudioItemAdmin</tt><big>(</big><em>model</em>, <em>admin_site</em><big>)</big><a class="headerlink" href="#digital_archive.admin.AudioItemAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="archive.html#archive.admin.ItemAdmin" title="archive.admin.ItemAdmin"><tt class="xref py py-class docutils literal"><span class="pre">archive.admin.ItemAdmin</span></tt></a></p>
+<dl class="attribute">
+<dt id="digital_archive.admin.AudioItemAdmin.fieldsets">
+<tt class="descname">fieldsets</tt><em class="property"> = [(None, {'fields': (('protocol', 'process'), ('identifier', 'legacy_identifier'), 'source')}), ('Description', {'fields': ['title', 'content', 'tags', 'function']}), ('Authors', {'fields': ('authors', 'contributors')}), ('Property', {'fields': (('owner', 'rightholder'),)}), ('Confidentiality', {'fields': (('confidential', 'restricted_to'),)}), ('Technical data', {'fields': ('flag', 'technical_observations', ('aquisition_operator', 'aquisition_date'))}), ('Quality', {'fields': ('audio_quality',)}), ('Timing', {'fields': (('duration', 'event_time_offset'),)})]</em><a class="headerlink" href="#digital_archive.admin.AudioItemAdmin.fieldsets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.admin.AudioItemAdmin.inlines">
+<tt class="descname">inlines</tt><em class="property"> = [&lt;class 'digital_archive.admin.ResourceFileInline'&gt;, &lt;class 'archive.admin.SceneInline'&gt;]</em><a class="headerlink" href="#digital_archive.admin.AudioItemAdmin.inlines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.admin.AudioItemAdmin.media">
+<tt class="descname">media</tt><a class="headerlink" href="#digital_archive.admin.AudioItemAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="digital_archive.admin.FileResourceAdmin">
+<em class="property">class </em><tt class="descclassname">digital_archive.admin.</tt><tt class="descname">FileResourceAdmin</tt><big>(</big><em>model</em>, <em>admin_site</em><big>)</big><a class="headerlink" href="#digital_archive.admin.FileResourceAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.contrib.admin.options.ModelAdmin</span></tt></p>
+<dl class="attribute">
+<dt id="digital_archive.admin.FileResourceAdmin.media">
+<tt class="descname">media</tt><a class="headerlink" href="#digital_archive.admin.FileResourceAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.admin.FileResourceAdmin.raw_id_fields">
+<tt class="descname">raw_id_fields</tt><em class="property"> = ('file', 'item')</em><a class="headerlink" href="#digital_archive.admin.FileResourceAdmin.raw_id_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="digital_archive.admin.GenericItemAdmin">
+<em class="property">class </em><tt class="descclassname">digital_archive.admin.</tt><tt class="descname">GenericItemAdmin</tt><big>(</big><em>model</em>, <em>admin_site</em><big>)</big><a class="headerlink" href="#digital_archive.admin.GenericItemAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="archive.html#archive.admin.ItemAdmin" title="archive.admin.ItemAdmin"><tt class="xref py py-class docutils literal"><span class="pre">archive.admin.ItemAdmin</span></tt></a></p>
+<dl class="attribute">
+<dt id="digital_archive.admin.GenericItemAdmin.fieldsets">
+<tt class="descname">fieldsets</tt><em class="property"> = [(None, {'fields': (('protocol', 'process'), ('identifier', 'legacy_identifier'), 'source')}), ('Description', {'fields': ['title', 'content', 'tags', 'function']}), ('Authors', {'fields': ('authors', 'contributors')}), ('Property', {'fields': (('owner', 'rightholder'),)}), ('Confidentiality', {'fields': (('confidential', 'restricted_to'),)}), ('Technical data', {'fields': ('flag', 'technical_observations', ('aquisition_operator', 'aquisition_date'))}), ('Size', {'fields': (('width', 'height'),)})]</em><a class="headerlink" href="#digital_archive.admin.GenericItemAdmin.fieldsets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.admin.GenericItemAdmin.inlines">
+<tt class="descname">inlines</tt><em class="property"> = [&lt;class 'digital_archive.admin.ResourceFileInline'&gt;, &lt;class 'events.admin.ItemEventInline'&gt;]</em><a class="headerlink" href="#digital_archive.admin.GenericItemAdmin.inlines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.admin.GenericItemAdmin.media">
+<tt class="descname">media</tt><a class="headerlink" href="#digital_archive.admin.GenericItemAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="digital_archive.admin.ResourceFileInline">
+<em class="property">class </em><tt class="descclassname">digital_archive.admin.</tt><tt class="descname">ResourceFileInline</tt><big>(</big><em>parent_model</em>, <em>admin_site</em><big>)</big><a class="headerlink" href="#digital_archive.admin.ResourceFileInline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.contrib.admin.options.TabularInline</span></tt></p>
+<dl class="attribute">
+<dt id="digital_archive.admin.ResourceFileInline.extra">
+<tt class="descname">extra</tt><em class="property"> = 1</em><a class="headerlink" href="#digital_archive.admin.ResourceFileInline.extra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.admin.ResourceFileInline.fieldsets">
+<tt class="descname">fieldsets</tt><em class="property"> = [('Quality', {'fields': (('file', 'timecode', 'esssence', 'bundle'),)})]</em><a class="headerlink" href="#digital_archive.admin.ResourceFileInline.fieldsets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.admin.ResourceFileInline.media">
+<tt class="descname">media</tt><a class="headerlink" href="#digital_archive.admin.ResourceFileInline.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.admin.ResourceFileInline.model">
+<tt class="descname">model</tt><a class="headerlink" href="#digital_archive.admin.ResourceFileInline.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">FileResource</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.admin.ResourceFileInline.raw_id_fields">
+<tt class="descname">raw_id_fields</tt><em class="property"> = ('file',)</em><a class="headerlink" href="#digital_archive.admin.ResourceFileInline.raw_id_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="digital_archive.admin.VideoItemAdmin">
+<em class="property">class </em><tt class="descclassname">digital_archive.admin.</tt><tt class="descname">VideoItemAdmin</tt><big>(</big><em>model</em>, <em>admin_site</em><big>)</big><a class="headerlink" href="#digital_archive.admin.VideoItemAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="archive.html#archive.admin.ItemAdmin" title="archive.admin.ItemAdmin"><tt class="xref py py-class docutils literal"><span class="pre">archive.admin.ItemAdmin</span></tt></a></p>
+<dl class="attribute">
+<dt id="digital_archive.admin.VideoItemAdmin.fieldsets">
+<tt class="descname">fieldsets</tt><em class="property"> = [(None, {'fields': (('protocol', 'process'), ('identifier', 'legacy_identifier'), 'source')}), ('Description', {'fields': ['title', 'content', 'tags', 'function']}), ('Authors', {'fields': ('authors', 'contributors')}), ('Property', {'fields': (('owner', 'rightholder'),)}), ('Confidentiality', {'fields': (('confidential', 'restricted_to'),)}), ('Technical data', {'fields': ('flag', 'technical_observations', ('aquisition_operator', 'aquisition_date'))}), ('Quality', {'fields': (('audio_quality', 'video_quality'),)}), ('Timing', {'fields': (('duration', 'event_time_offset'),)})]</em><a class="headerlink" href="#digital_archive.admin.VideoItemAdmin.fieldsets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.admin.VideoItemAdmin.inlines">
+<tt class="descname">inlines</tt><em class="property"> = [&lt;class 'digital_archive.admin.ResourceFileInline'&gt;, &lt;class 'archive.admin.SceneInline'&gt;]</em><a class="headerlink" href="#digital_archive.admin.VideoItemAdmin.inlines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.admin.VideoItemAdmin.media">
+<tt class="descname">media</tt><a class="headerlink" href="#digital_archive.admin.VideoItemAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-digital_archive.models">
+<span id="digital-archive-models-module"></span><h2>digital_archive.models module<a class="headerlink" href="#module-digital_archive.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="digital_archive.models.ApplicationItem">
+<em class="property">class </em><tt class="descclassname">digital_archive.models.</tt><tt class="descname">ApplicationItem</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.ApplicationItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="archive.html#archive.models.Item" title="archive.models.Item"><tt class="xref py py-class docutils literal"><span class="pre">archive.models.Item</span></tt></a></p>
+<p>Describes technical metadata for file with textual content</p>
+<dl class="exception">
+<dt id="digital_archive.models.ApplicationItem.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#digital_archive.models.ApplicationItem.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">archive.models.DoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="digital_archive.models.ApplicationItem.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">ApplicationItem.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#digital_archive.models.ApplicationItem.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">archive.models.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="digital_archive.models.ApplicationItem.get_system_display">
+<tt class="descclassname">ApplicationItem.</tt><tt class="descname">get_system_display</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.ApplicationItem.get_system_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.ApplicationItem.item_ptr">
+<tt class="descclassname">ApplicationItem.</tt><tt class="descname">item_ptr</tt><a class="headerlink" href="#digital_archive.models.ApplicationItem.item_ptr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.ApplicationItem.objects">
+<tt class="descclassname">ApplicationItem.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aabfb9a8650&gt;</em><a class="headerlink" href="#digital_archive.models.ApplicationItem.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="digital_archive.models.ApplicationItem.save">
+<tt class="descclassname">ApplicationItem.</tt><tt class="descname">save</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.ApplicationItem.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.ApplicationItem.tagged_items">
+<tt class="descclassname">ApplicationItem.</tt><tt class="descname">tagged_items</tt><a class="headerlink" href="#digital_archive.models.ApplicationItem.tagged_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple &#8220;remote&#8221; values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+&#8220;article.publications&#8221;, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="digital_archive.models.AudioItem">
+<em class="property">class </em><tt class="descclassname">digital_archive.models.</tt><tt class="descname">AudioItem</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.AudioItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="archive.html#archive.models.Item" title="archive.models.Item"><tt class="xref py py-class docutils literal"><span class="pre">archive.models.Item</span></tt></a></p>
+<p>Describes technical metadata for file with audio content</p>
+<dl class="exception">
+<dt id="digital_archive.models.AudioItem.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#digital_archive.models.AudioItem.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">archive.models.DoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="digital_archive.models.AudioItem.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">AudioItem.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#digital_archive.models.AudioItem.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">archive.models.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="digital_archive.models.AudioItem.get_audio_quality_display">
+<tt class="descclassname">AudioItem.</tt><tt class="descname">get_audio_quality_display</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.AudioItem.get_audio_quality_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.AudioItem.item_ptr">
+<tt class="descclassname">AudioItem.</tt><tt class="descname">item_ptr</tt><a class="headerlink" href="#digital_archive.models.AudioItem.item_ptr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.AudioItem.objects">
+<tt class="descclassname">AudioItem.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aabfb95df10&gt;</em><a class="headerlink" href="#digital_archive.models.AudioItem.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="digital_archive.models.AudioItem.save">
+<tt class="descclassname">AudioItem.</tt><tt class="descname">save</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.AudioItem.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.AudioItem.tagged_items">
+<tt class="descclassname">AudioItem.</tt><tt class="descname">tagged_items</tt><a class="headerlink" href="#digital_archive.models.AudioItem.tagged_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple &#8220;remote&#8221; values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+&#8220;article.publications&#8221;, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="digital_archive.models.Bundle">
+<em class="property">class </em><tt class="descclassname">digital_archive.models.</tt><tt class="descname">Bundle</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.Bundle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Assembly of items which for some reason have to be treated as a whole.
+Example HTML page, sequenbce of consequent audio recordings, etc</p>
+<dl class="exception">
+<dt id="digital_archive.models.Bundle.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#digital_archive.models.Bundle.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="digital_archive.models.Bundle.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">Bundle.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#digital_archive.models.Bundle.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.Bundle.bundle_type">
+<tt class="descclassname">Bundle.</tt><tt class="descname">bundle_type</tt><a class="headerlink" href="#digital_archive.models.Bundle.bundle_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="classmethod">
+<dt id="digital_archive.models.Bundle.for_item">
+<em class="property">classmethod </em><tt class="descclassname">Bundle.</tt><tt class="descname">for_item</tt><big>(</big><em>item_id</em>, <em>bundle_type_id</em><big>)</big><a class="headerlink" href="#digital_archive.models.Bundle.for_item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.Bundle.objects">
+<tt class="descclassname">Bundle.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aabfb9a8f10&gt;</em><a class="headerlink" href="#digital_archive.models.Bundle.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.Bundle.related_boundles">
+<tt class="descclassname">Bundle.</tt><tt class="descname">related_boundles</tt><a class="headerlink" href="#digital_archive.models.Bundle.related_boundles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="digital_archive.models.BundleType">
+<em class="property">class </em><tt class="descclassname">digital_archive.models.</tt><tt class="descname">BundleType</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.BundleType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Defines Boundle Type</p>
+<dl class="exception">
+<dt id="digital_archive.models.BundleType.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#digital_archive.models.BundleType.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="digital_archive.models.BundleType.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">BundleType.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#digital_archive.models.BundleType.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.BundleType.objects">
+<tt class="descclassname">BundleType.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aabfb9a8a10&gt;</em><a class="headerlink" href="#digital_archive.models.BundleType.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.BundleType.related_bundle_types">
+<tt class="descclassname">BundleType.</tt><tt class="descname">related_bundle_types</tt><a class="headerlink" href="#digital_archive.models.BundleType.related_bundle_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="digital_archive.models.FileResource">
+<em class="property">class </em><tt class="descclassname">digital_archive.models.</tt><tt class="descname">FileResource</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.FileResource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Relates File Resource with Item.
+Indicates if is &#8220;essence&#8221; (original / highest quality copy),
+if it belongs to boundle and registers date and user whoi subscribe it</p>
+<dl class="exception">
+<dt id="digital_archive.models.FileResource.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#digital_archive.models.FileResource.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="digital_archive.models.FileResource.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">FileResource.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#digital_archive.models.FileResource.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.FileResource.bundle">
+<tt class="descclassname">FileResource.</tt><tt class="descname">bundle</tt><a class="headerlink" href="#digital_archive.models.FileResource.bundle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.FileResource.file">
+<tt class="descclassname">FileResource.</tt><tt class="descname">file</tt><a class="headerlink" href="#digital_archive.models.FileResource.file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="digital_archive.models.FileResource.get_next_by_submitted_at">
+<tt class="descclassname">FileResource.</tt><tt class="descname">get_next_by_submitted_at</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.FileResource.get_next_by_submitted_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="digital_archive.models.FileResource.get_previous_by_submitted_at">
+<tt class="descclassname">FileResource.</tt><tt class="descname">get_previous_by_submitted_at</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.FileResource.get_previous_by_submitted_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.FileResource.item">
+<tt class="descclassname">FileResource.</tt><tt class="descname">item</tt><a class="headerlink" href="#digital_archive.models.FileResource.item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.FileResource.objects">
+<tt class="descclassname">FileResource.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aabfbcfa7d0&gt;</em><a class="headerlink" href="#digital_archive.models.FileResource.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.FileResource.submitted_by">
+<tt class="descclassname">FileResource.</tt><tt class="descname">submitted_by</tt><a class="headerlink" href="#digital_archive.models.FileResource.submitted_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="digital_archive.models.ImageItem">
+<em class="property">class </em><tt class="descclassname">digital_archive.models.</tt><tt class="descname">ImageItem</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.ImageItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="archive.html#archive.models.Item" title="archive.models.Item"><tt class="xref py py-class docutils literal"><span class="pre">archive.models.Item</span></tt></a></p>
+<p>Describes technical metadata for file with visual content</p>
+<dl class="exception">
+<dt id="digital_archive.models.ImageItem.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#digital_archive.models.ImageItem.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">archive.models.DoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="digital_archive.models.ImageItem.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">ImageItem.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#digital_archive.models.ImageItem.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">archive.models.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.ImageItem.item_ptr">
+<tt class="descclassname">ImageItem.</tt><tt class="descname">item_ptr</tt><a class="headerlink" href="#digital_archive.models.ImageItem.item_ptr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.ImageItem.objects">
+<tt class="descclassname">ImageItem.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aabfb97aa50&gt;</em><a class="headerlink" href="#digital_archive.models.ImageItem.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="digital_archive.models.ImageItem.save">
+<tt class="descclassname">ImageItem.</tt><tt class="descname">save</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.ImageItem.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.ImageItem.tagged_items">
+<tt class="descclassname">ImageItem.</tt><tt class="descname">tagged_items</tt><a class="headerlink" href="#digital_archive.models.ImageItem.tagged_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple &#8220;remote&#8221; values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+&#8220;article.publications&#8221;, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="digital_archive.models.TextItem">
+<em class="property">class </em><tt class="descclassname">digital_archive.models.</tt><tt class="descname">TextItem</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.TextItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="archive.html#archive.models.Item" title="archive.models.Item"><tt class="xref py py-class docutils literal"><span class="pre">archive.models.Item</span></tt></a></p>
+<p>Describes technical metadata for file with textual content</p>
+<dl class="exception">
+<dt id="digital_archive.models.TextItem.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#digital_archive.models.TextItem.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">archive.models.DoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="digital_archive.models.TextItem.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">TextItem.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#digital_archive.models.TextItem.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">archive.models.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.TextItem.item_ptr">
+<tt class="descclassname">TextItem.</tt><tt class="descname">item_ptr</tt><a class="headerlink" href="#digital_archive.models.TextItem.item_ptr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.TextItem.objects">
+<tt class="descclassname">TextItem.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aabfb9a8090&gt;</em><a class="headerlink" href="#digital_archive.models.TextItem.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="digital_archive.models.TextItem.save">
+<tt class="descclassname">TextItem.</tt><tt class="descname">save</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.TextItem.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.TextItem.tagged_items">
+<tt class="descclassname">TextItem.</tt><tt class="descname">tagged_items</tt><a class="headerlink" href="#digital_archive.models.TextItem.tagged_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple &#8220;remote&#8221; values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+&#8220;article.publications&#8221;, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="digital_archive.models.VideoItem">
+<em class="property">class </em><tt class="descclassname">digital_archive.models.</tt><tt class="descname">VideoItem</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.VideoItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="archive.html#archive.models.Item" title="archive.models.Item"><tt class="xref py py-class docutils literal"><span class="pre">archive.models.Item</span></tt></a></p>
+<p>Describes technical metadata for file with video content</p>
+<dl class="exception">
+<dt id="digital_archive.models.VideoItem.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#digital_archive.models.VideoItem.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">archive.models.DoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="digital_archive.models.VideoItem.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">VideoItem.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#digital_archive.models.VideoItem.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">archive.models.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="digital_archive.models.VideoItem.get_audio_quality_display">
+<tt class="descclassname">VideoItem.</tt><tt class="descname">get_audio_quality_display</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.VideoItem.get_audio_quality_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="digital_archive.models.VideoItem.get_video_quality_display">
+<tt class="descclassname">VideoItem.</tt><tt class="descname">get_video_quality_display</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.VideoItem.get_video_quality_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.VideoItem.item_ptr">
+<tt class="descclassname">VideoItem.</tt><tt class="descname">item_ptr</tt><a class="headerlink" href="#digital_archive.models.VideoItem.item_ptr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.VideoItem.objects">
+<tt class="descclassname">VideoItem.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aabfb97a550&gt;</em><a class="headerlink" href="#digital_archive.models.VideoItem.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="digital_archive.models.VideoItem.save">
+<tt class="descclassname">VideoItem.</tt><tt class="descname">save</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#digital_archive.models.VideoItem.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="digital_archive.models.VideoItem.tagged_items">
+<tt class="descclassname">VideoItem.</tt><tt class="descname">tagged_items</tt><a class="headerlink" href="#digital_archive.models.VideoItem.tagged_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple &#8220;remote&#8221; values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+&#8220;article.publications&#8221;, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-digital_archive">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-digital_archive" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">DRENPA</a></h1>
+
+
+
+
+
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=&repo=&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="archive.html">archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawler.html">crawler package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">digital_archive package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-digital_archive.admin">digital_archive.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-digital_archive.models">digital_archive.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-digital_archive">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="drenpa.html">drenpa package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">events package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ingestion.html">ingestion package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physical_archive.html">physical_archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository.html">repository package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">storage package</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Shang Shung Fundation.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.2.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.6.3</a>
+      
+      |
+      <a href="_sources/digital_archive.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,45 @@
+archive package
+===============
+
+Subpackages
+-----------
+
+.. toctree::
+
+    archive.management
+
+Submodules
+----------
+
+archive.admin module
+--------------------
+
+.. automodule:: archive.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+archive.models module
+---------------------
+
+.. automodule:: archive.models
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+archive.tests module
+--------------------
+
+.. automodule:: archive.tests
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: archive
+    :members:
+    :undoc-members:
+    :show-inheritance:

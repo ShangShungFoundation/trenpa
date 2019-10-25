@@ -1,0 +1,38 @@
+ingestion package
+=================
+
+Submodules
+----------
+
+ingestion.admin module
+----------------------
+
+.. automodule:: ingestion.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ingestion.models module
+-----------------------
+
+.. automodule:: ingestion.models
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ingestion.views module
+----------------------
+
+.. automodule:: ingestion.views
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ingestion
+    :members:
+    :undoc-members:
+    :show-inheritance:

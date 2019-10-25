@@ -1,0 +1,78 @@
+crawler package
+===============
+
+Subpackages
+-----------
+
+.. toctree::
+
+    crawler.actions
+    crawler.management
+
+Submodules
+----------
+
+crawler.check_backup module
+---------------------------
+
+.. automodule:: crawler.check_backup
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+crawler.compute_hash module
+---------------------------
+
+.. automodule:: crawler.compute_hash
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+crawler.crawler module
+----------------------
+
+.. automodule:: crawler.crawler
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+crawler.hachoirparser module
+----------------------------
+
+.. automodule:: crawler.hachoirparser
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+crawler.prod_check_backup module
+--------------------------------
+
+.. automodule:: crawler.prod_check_backup
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+crawler.test_check_backup module
+--------------------------------
+
+.. automodule:: crawler.test_check_backup
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+crawler.tika_parser module
+--------------------------
+
+.. automodule:: crawler.tika_parser
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: crawler
+    :members:
+    :undoc-members:
+    :show-inheritance:

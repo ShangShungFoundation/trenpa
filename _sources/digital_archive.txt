@@ -1,0 +1,30 @@
+digital_archive package
+=======================
+
+Submodules
+----------
+
+digital_archive.admin module
+----------------------------
+
+.. automodule:: digital_archive.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+digital_archive.models module
+-----------------------------
+
+.. automodule:: digital_archive.models
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: digital_archive
+    :members:
+    :undoc-members:
+    :show-inheritance:
