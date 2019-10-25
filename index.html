@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to TRENPA documentation! &mdash; DRENPA beta documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DRENPA beta documentation" href="#" />
+    <link rel="next" title="archive package" href="archive.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="archive.html" title="archive package"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">DRENPA beta documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-trenpa-documentation">
+<h1>Welcome to TRENPA documentation!<a class="headerlink" href="#welcome-to-trenpa-documentation" title="Permalink to this headline">¶</a></h1>
+<p class="centered">
+<strong>TRENPA 0.1</strong></p><div class="section" id="trenpa">
+<h2>TRENPA<a class="headerlink" href="#trenpa" title="Permalink to this headline">¶</a></h2>
+<p><strong>TRENPA</strong> <em>(Tib. Memory དྲན་པ། )</em> is a software platform enabling management of acquisition, cataloguing, curating, preserving, dissemination access and collaboration for both physical and digital archive, with strong support for multimedia content.</p>
+<p>It follows the best archival practices and complies to ISO 14721:2003 <a class="footnote-reference" href="#id28" id="id1">[19]</a></p>
+</div>
+<div class="section" id="vocabulary">
+<h2>Vocabulary<a class="headerlink" href="#vocabulary" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Archive</dt>
+<dd>An organization of people and systems that have accepted the responsibility to protect, retain, and preserve information and data and make it available for a Designated Communityâ€� Source: ISO 14721 <a class="footnote-reference" href="#id28" id="id2">[19]</a></dd>
+<dt>Repository</dt>
+<dd>Network accessible file server or cloud service</dd>
+<dt>Item</dt>
+<dd>The object or &#8220;stuff&#8221; that metadata is &#8220;about&#8221; whether it is physical or digital. Each item has an identifier that is unique within the scope of the repository of which it is a constituent. Item basic properties relate to the Dublin Core scheme.</dd>
+<dt>Collection</dt>
+<dd>Assembly of items gathered by particular criteria. Collections may be hierarchical (one can belong to another) and heterogeneous (can contain different classes of items). One item may belong to various Collections.</dd>
+<dt>Bundle</dt>
+<dd>Assembly of items which, for particular reasons, have to be treated as a whole. Example: HTML page, consequent audio recordings, scanned pages of a book etc.</dd>
+<dt>Essence</dt>
+<dd>Original item or the highest-quality representation of an item selected from various copies of the given item.</dd>
+<dt>Protocol</dt>
+<dd>Well defined list of steps and practices used to achieve a certain goal (ex: acquire a new archival item).</dd>
+<dt>Policy</dt>
+<dd><p class="first">0fficial public statement that describes collection&#8217;s <a class="footnote-reference" href="#id27" id="id3">[18]</a>:</p>
+<ul class="last simple">
+<li>purpose</li>
+<li>why it collects</li>
+<li>what it collects</li>
+<li>what it does not collect</li>
+<li>who can use the material collected</li>
+</ul>
+</dd>
+<dt>Person</dt>
+<dd>Broad definition of an individual or an institution <em>(like in law jargon)</em></dd>
+<dt>Consumer</dt>
+<dd>The role played by those persons, or client systems, who interact with TRENPA services to find preserved information of interest and to access that information in detail.</dd>
+<dt>Acquisition</dt>
+<dd>Process of accepting material into the archive. In TRENPA it refers to the physical items.</dd>
+<dt>Ingestion</dt>
+<dd>Acquisition of a digital item into the archive. In TRENPA it refers to the digital item which could be transformed (transcoded).</dd>
+<dt>Digitalization</dt>
+<dd>Ingestion of a file which is the result of digitalization of analogue media.</dd>
+<dt>Dissemination</dt>
+<dd>Making available an archived item to the Consumer. Item may be transformed (transcoded) to meet broadcast necessities. <a class="footnote-reference" href="#id33" id="id4">[24]</a></dd>
+</dl>
+</div>
+<div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p><em>TRENPA</em> is born from necessity to manage Shang Shung Institute physical and digital archives.
+Most archival software addresses or physical or digital Archive (Fedora, DSpace).
+In the multimedia library physical media get digitalized, so a bridge and mutual reference between physical and digital objects are necessary.</p>
+<p>Since the biggest part of SSI Archive consist of multimedia items TRENPA contains specialized data models (Events) and functionality to support them. Most of digital repositories apply atomic approach to item metadata. It means that each item has self-contained metadata that fully describes it.
+It is possible in TRENPA too but we believe that important item information comes not only from items themselves but emerges from the network of relations between them.
+On a functional level this information is naturally contained by a relational database.
+SQL language operating relational databases is likely to stay for a foreseen future so if the database layout is clear, in the future it will be possible to retrieve information from it even if the current software is not there anymore.
+So, ultimately, a proper underlying database should be preserved in a trustworthy way (backups, replication).</p>
+<p>TRENPA draws from the wealth of previous research and development in the area of digital library systems. Though not a full implementation, the TRENPA architecture has roots in Kahn and Wilenskyâ€™s Framework for Distributed Digital Object Services <a class="footnote-reference" href="#id16" id="id5">[7]</a>.</p>
+</div>
+<div class="section" id="metadata">
+<h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
+<img alt="https://docs.google.com/drawings/d/151xCNr744f9vpALI7x7czYQeaUwvxGQjObDWUX1tIdk/pub?w=868&amp;amp;h=730" src="https://docs.google.com/drawings/d/151xCNr744f9vpALI7x7czYQeaUwvxGQjObDWUX1tIdk/pub?w=868&amp;amp;h=730" />
+<p>Trenpa Data Topology Diagram</p>
+<p>TRENPA endorses the widely accepted Dublin Core metadata scheme. In most cases items extend it with additional properties.
+The Simple Dublin Core Metadata Element Set (DCMES) consists of 15 metadata elements: Title, Creator, Subject, Description, Publisher, Contributor, Date, Type, Format, Identifier, Source, Language, Relation, Coverage, Rights Implementations.
+There are additional fields for keywords, and technical metadata and rights metadata, among others.</p>
+<dl class="docutils">
+<dt>Broadly speaking, TRENPA holds three sorts of metadata about archived content:</dt>
+<dd>Descriptive, administrative and structural metadata.</dd>
+<dt><strong>Descriptive Metadata</strong></dt>
+<dd>Each Item has one qualified Dublin Core metadata record which is extended depending on class to which the item belongs.</dd>
+<dt><strong>Administrative Metadata</strong></dt>
+<dd>This includes preservation metadata, provenance and authorization policy data.</dd>
+<dt><strong>Structural Metadata</strong></dt>
+<dd>This includes information about how to present an item to an end-user, and the relationships between constituent parts of the item (Bundle). As an example, consider a thesis consisting of a number of TIFF images, each depicting a single page of the thesis. Structural metadata would include the fact that each image is a single page, and the ordering of the TIFF images/pages.
+Relations with other items and a conceptual object (Event)  In the future TRENPA may comply to other metadata standards <a class="footnote-reference" href="#id25" id="id6">[16]</a> like METS <a class="footnote-reference" href="#id19" id="id7">[10]</a>   Events &#8212;&#8212; Event model is the highest level of Trenpa metadata organization. Each event data <em>&#8216;grosso modo&#8217;</em> answers four Ws: What? Where? When? Who?</dd>
+</dl>
+<p>Event may be composed of other events, for example a festival event may have multiple concert “child” events: a press conference, a theatrical performance,  etc.
+This way even temporary, geographically despaired and complex events can be easily defined. The creation of overly complex events is not recommended. In most cases three levels of nested events should be enough.</p>
+<img alt="https://docs.google.com/drawings/d/1EImitskwiMM_DqdvZ5wyWTpuxQbKdmWvro9pmE97qYU/pub?w=966&amp;amp;h=688" src="https://docs.google.com/drawings/d/1EImitskwiMM_DqdvZ5wyWTpuxQbKdmWvro9pmE97qYU/pub?w=966&amp;amp;h=688" />
+<p>For example: An event video has been recorded on MiniDV and an audio recording has been made on magnetic tapes and, later on those tapes have been digitalized to audio/video files. All those items posses the same semantic charge. So instead of describing semantic metadata for each one of them, metadata resides on event abstraction to which they all relate. In this way all those items may automatically inherit metadata from it.</p>
+<p>Event may posses time cues describing:</p>
+<ul class="simple">
+<li>speech - literal quotes</li>
+<li>semantic - tag describing the <em>topic</em> of a given scene</li>
+<li>situational - describes a change of situation</li>
+</ul>
+</div>
+<div class="section" id="oais">
+<h2>OAIS<a class="headerlink" href="#oais" title="Permalink to this headline">¶</a></h2>
+<p>Overall TRENPA architecture is based on the Consultative Committee for Space Data Systems Reference Model for an Open Archival Information System (OAIS).
+OAIS is a reference model for long-term preservation of digital (and other) assets. While it does not specify the implementation or functional design, OAIS is an indispensable guide to creating an archive with an accepted set of roles, responsibilities and methods that encourage safe, long-term archival and access to critical government information.</p>
+<img alt="https://docs.google.com/drawings/d/1Q_8j84-0s8zQewAQ2YIlIBd4jiyNM5AHBwka8cjK-5E/pub?w=968&amp;amp;h=452" src="https://docs.google.com/drawings/d/1Q_8j84-0s8zQewAQ2YIlIBd4jiyNM5AHBwka8cjK-5E/pub?w=968&amp;amp;h=452" />
+<dl class="docutils">
+<dt>Submission Information Package (SIP)</dt>
+<dd>is the information sent from the producer to the archive</dd>
+<dt>Archival Information Package (AIP)</dt>
+<dd>is the information stored by the archive</dd>
+<dt>Dissemination Information Package (DIP)</dt>
+<dd>is the information sent to a user when requested</dd>
+</dl>
+<p>OAIS benefits
+The OAIS reference model:</p>
+<ul class="simple">
+<li>Is a well known and well understood model for long-term preservation.</li>
+<li>Provides the discipline necessary to maintain the accessibility of packages and the interpretation of the information they contain even across changes in technology and changes in representation standards.</li>
+<li>Clearly defines the roles of the actors (producers, consumers, managers) who interact with the archive.</li>
+<li>Identifies the necessary controls required to maintain reliable archive management.</li>
+<li>Identifies the documentation required to communicate the archiveâ€™s purpose and interactions to interested parties.</li>
+<li>Applies the chain of custody of archived packages to ensure that documents are not inappropriately tampered with.</li>
+</ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+TRENPA Data Model
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;</p>
+<img alt="https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;amp;h=686" src="https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;amp;h=686" />
+</div>
+<div class="section" id="trenpa-system-architecture">
+<h2>TRENPA System Architecture<a class="headerlink" href="#trenpa-system-architecture" title="Permalink to this headline">¶</a></h2>
+<img alt="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" src="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" />
+<p>TRENPA Platform System Scheme</p>
+<p>The main code of TRENPA is implemented in Python, and runs on any UNIX-like system such as Linux,  BSD Unix or Mac. It may work on Windows but it has not been tested.</p>
+<p>It makes use of several third-party open source systems:</p>
+<ul class="simple">
+<li><strong>PostgreSQL</strong>, an open source relational database system</li>
+<li><strong>Django</strong>, high level reach Python Framework</li>
+<li><strong>Server</strong>: Apache, Ligh</li>
+<li>Other External Python and Django dependencies</li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li>Unicode support</li>
+<li>Support for both Physical and Digital Archive</li>
+<li>Flexible, hierarchical, heterogeneous collections</li>
+<li>Dublin Core basic metadata</li>
+<li>Imprecise dates</li>
+<li>Event model for multimedia recording and other event related items (photos, etc.)</li>
+<li>Support for distributed file repositories</li>
+<li>Checksum for all files</li>
+</ul>
+</div>
+<div class="section" id="functional-overview">
+<h2>Functional Overview<a class="headerlink" href="#functional-overview" title="Permalink to this headline">¶</a></h2>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+The functional aspects of TRENPA can be summarized as follows:</p>
+<ul class="simple">
+<li>A data model for basic organization of data is defined.</li>
+<li>Metadata  of various types is stored by the system.</li>
+<li>The system stores information about users of the system. Some users might not be humans but other computerized systems.</li>
+<li>While much of the effort is concerned with easing access to an institutionâ€™s digital material, simply allowing full public access is not always acceptable.  Additionally functions such as depositing and reviewing must be restricted to appropriate individuals. Hence the system includes an authorization function.</li>
+<li>All relevant actions on the archive content should be logged together with detailed description of resulting change.</li>
+<li>The system must be able to accept incoming material (ingestion).</li>
+<li>Some communities may require that material or accompanying metadata entering the archive be checked or augmented by designated individuals. This process is called work-flow.</li>
+<li>In order that material in the archive may be cited and accessed using information in a citation globally unique persistent identifiers are assigned to archived objects (â€˜itemsâ€™).</li>
+<li>End users should be able to explore and discover the contents of the repository. To this end, TRENPA must offer search and browse functions.</li>
+<li>TRENPA should enable diverse communities collaboration on ingestion, cataloguing, metadata enrichment (<em>crowd-sourcing</em>) together with tools for community moderation and content !!br0ken!!</li>
+<li>It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access TRENPA to check this. TRENPA should offer an automatic e-mail alerting service (subscription).</li>
+<li>A Web user interface provides access to the above functionality.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="trenpa-digital-platform-architecture">
+<h1>TRENPA Digital Platform Architecture<a class="headerlink" href="#trenpa-digital-platform-architecture" title="Permalink to this headline">¶</a></h1>
+<p>The functional aspects of DRENPA can be summarized as follows:</p>
+<ul class="simple">
+<li>A data model for basic organization of data is defined</li>
+<li>Metadata of various types is stored by the system</li>
+<li>The system stores information about users of the system. Some users might not be humans but other computerized systems</li>
+<li>While much of the effort is concerned with easing access to an institution’s digital material, simply allowing full public access is not always acceptable. Additionally functions such as depositing and reviewing must be restricted to appropriate individuals. Hence the system includes an authorization function</li>
+<li>All relevant actions on the archive content should be logged together with detailed description of resulting change</li>
+<li>The system must be able to accept incoming material (ingestion)</li>
+<li>Some communities may require that material or accompanying metadata entering the archive be checked or augmented by designated individuals. This process is called workflow</li>
+<li>In order that material in the archive may be cited and accessed using information in a citation globally unique persistent identifiers are assigned to archived objects (‘items’).</li>
+<li>End users should be able to explore and discover the contents of the repository. To this end, DRENPA must offer search and browse functions</li>
+<li>DRENPA should enable diverse communities collaboration on ingestion, cataloging, metadata enrichment (<em>crowd-sourcing</em>) together with tools for community moderation and content curration.</li>
+<li>It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access DRENPA to check this. DRENPA should offer an automatic e-mail alerting service (subscription)</li>
+<li>A Web user interface provides access to the above functionality</li>
+</ul>
+<div class="section" id="drenpa-data-model">
+<h2>DRENPA Data Model<a class="headerlink" href="#drenpa-data-model" title="Permalink to this headline">¶</a></h2>
+<img alt="https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;amp;h=686" src="https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;amp;h=686" />
+</div>
+<div class="section" id="drenpa-system-architecture">
+<h2>DRENPA System Architecture<a class="headerlink" href="#drenpa-system-architecture" title="Permalink to this headline">¶</a></h2>
+<img alt="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" src="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" />
+<p>DRENPA Platform System Scheme</p>
+<p>The main code of DRENPA is implemented in Python, and runs on any UNIX-like system such as Linux,  BSD Unix or Mac. It may work on Windows but it is not tested.</p>
+<p>It makes use of several third-party open source systems:</p>
+<ul class="simple">
+<li><strong>PostgreSQL</strong>, an open source relational database system</li>
+<li><strong>Django</strong>, mature open source Python Framework</li>
+<li><strong>Server</strong>: Apache, LighHttp, etc</li>
+<li>Other External Python and Django dependencies</li>
+</ul>
+<p>DRENPA Digital Platform Architecture
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; 41cc99e067c02101140fa6297c01567f9d6180ae
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+<img alt="https://docs.google.com/drawings/d/1MrMSM9nlXRq42VF9qyPA6SY6wL-dnseJ8eE7NUQHFzk/pub?w=796&amp;amp;h=575" src="https://docs.google.com/drawings/d/1MrMSM9nlXRq42VF9qyPA6SY6wL-dnseJ8eE7NUQHFzk/pub?w=796&amp;amp;h=575" />
+<p>TRENPA Digital Platform Architecture consist of:</p>
+<ol class="arabic simple">
+<li><strong>Intranet</strong>. Protected area where only authorized staff has access and can operate. It stores all archive items and its metadata.<ul>
+<li><strong>File Repository</strong> - protected digital file storage/s where original files are stored.</li>
+<li><strong>Archive Master</strong> - Master Postresql database. All physical and digital archive data is stored here.</li>
+<li><strong>Job Queue</strong> - Automatized bot executing programmed jobs on various components of the TRENPA platform.</li>
+<li><strong>Transcode Servers</strong> - Dedicated servers for executing multimedia transcoding jobs.</li>
+<li><strong>File Backup</strong> - off site backup copy of &#8216;File Repository&#8217; and &#8216;Archive Master&#8217;.</li>
+</ul>
+</li>
+<li><strong>Internet</strong>. Area where defined communities can interact with archival content:<ul>
+<li><strong>Archive Slave</strong> - mirror copy of the Archive Master</li>
+<li><strong>Dissemination Repository</strong> - File server or cloud storage serving disseminated copies of Items.</li>
+<li><strong>Streaming Server</strong> - Service allowing on-demand delivery of multimedia content to the customer.</li>
+<li><strong>Payment Gateway</strong> - Third Party Service processing payments for TRENPA services.</li>
+<li><strong>CMS</strong> - Content Management System - front-end exposing archive content to the customer. It allows discovery, navigation, submission and collaboration.  <em>(crowd sourcing)</em> on archival content.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="other-software">
+<h2>Other Software<a class="headerlink" href="#other-software" title="Permalink to this headline">¶</a></h2>
+<p>Must be mentioned that TRENPA is inspired and implements proved solutions which can be found in open source software like DSpace <a class="footnote-reference" href="#id30" id="id8">[21]</a> or Fedora <a class="footnote-reference" href="#id29" id="id9">[20]</a></p>
+</div>
+<div class="section" id="papers-research">
+<h2>Papers/Research<a class="headerlink" href="#papers-research" title="Permalink to this headline">¶</a></h2>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td>Arms, William Y.: Key Concepts in the Architecture of the Digital Library, D-Lib Magazine, July 1995. <a class="reference external" href="http://www.dlib.org/dlib/July95/07arms.html">http://www.dlib.org/dlib/July95/07arms.html</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td>Arms, William Y., Blanchi, Christophe, and Overly, Edward A.: An Architecture for Information in Digital Libraries, D-Lib Magazine, February 1997. <a class="reference external" href="http://www.dlib.org/dlib/february97/cnri/02arms1.html">http://www.dlib.org/dlib/february97/cnri/02arms1.html</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id12" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[3]</td><td>Dublin Core Library Application Profile. <a class="reference external" href="http://dublincore.org/documents/2002/09/24/library-application-profile/">http://dublincore.org/documents/2002/09/24/library-application-profile/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id13" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[4]</td><td>Publishing the Archive: Definitions and Typologies <a class="reference external" href="http://www.archivejournal.net/issue/4/archives-remixed/publishing-the-archive-definitions-and-typologies/">http://www.archivejournal.net/issue/4/archives-remixed/publishing-the-archive-definitions-and-typologies/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[5]</td><td>Long-Term Digital Retention and Preservation Reference Model <a class="reference external" href="http://www.ltdprm.org/reference-model/what-is-an-archive">http://www.ltdprm.org/reference-model/what-is-an-archive</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id15" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[6]</td><td>Handle System Overview. <a class="reference external" href="http://www.ietf.org/internet-drafts/draft-sun-handle-system-10.txt">http://www.ietf.org/internet-drafts/draft-sun-handle-system-10.txt</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id16" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[7]</a></td><td>Kahn, Robert and Wilensky, Robert: A Framework for Distributed Digital Object Services, May 1995. <a class="reference external" href="http://www.cnri.reston.va.us/home/cstr/arch/k-w.html">http://www.cnri.reston.va.us/home/cstr/arch/k-w.html</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id17" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[8]</td><td>Koehler, Wallace: Web Page Change and Persistence-A Four-Year Longitudinal Study. In the Journal of the American Society for Information Science and Technology 53, 2 (December 2001) 162â€”180.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id18" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[9]</td><td>Lagoze, C. and Hunter, J. â€œThe ABC Ontology and Modelâ€�, in Proceedings of the International Conference on Dublin Core and Metadata Applications 2001, Tokyo, 2001, 160-176.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id19" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[10]</a></td><td>Metadata Encoding and Transmission Standard (METS). <a class="reference external" href="http://www.loc.gov/standards/mets/">http://www.loc.gov/standards/mets/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id20" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[11]</td><td>OCLC Research OAICat Open Source Project.http://www.oclc.org/research/software/oai/cat.shtm</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id21" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[12]</td><td>Open Archives Initiative. <a class="reference external" href="http://www.openarchives.org/">http://www.openarchives.org/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id22" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[13]</td><td>Smith, MacKenzie, Barton, Mary, Bass, Mick, Branschofsky, Margret, MacClellan, Greg, Stuve, David, Tansley, Robert and Walker, Julie H: DSpace: An Open Source Dynamic Digital Repository. D-Lib Magazine 9, 1 (January 2003). <a class="reference external" href="http://www.dlib.org/dlib/january03/smith/01smith.html">http://www.dlib.org/dlib/january03/smith/01smith.html</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id23" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[14]</td><td>Staples, Thornton and Wayland, Ross: Virginia Dons FEDORA: A Prototype for a Digital Object Repository. D-Lib Magazine 6, 7/8 (July/August 2000). <a class="reference external" href="http://www.dlib.org/dlib/july00/staples/07staples.html">http://www.dlib.org/dlib/july00/staples/07staples.html</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id24" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[15]</td><td><a class="reference external" href="http://www.securelyrooted.com/dpcmm/">http://www.securelyrooted.com/dpcmm/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id25" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[16]</a></td><td><a class="reference external" href="http://en.wikibooks.org/wiki/Open_Metadata_Handbook/Metadata_Standards">http://en.wikibooks.org/wiki/Open_Metadata_Handbook/Metadata_Standards</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id26" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[17]</td><td>OASIS <a class="reference external" href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=57284">http://www.iso.org/iso/catalogue_detail.htm?csnumber=57284</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id27" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[18]</a></td><td>Developing an Archives Policy <a class="reference external" href="http://prov.vic.gov.au/community-programs/training/developing-an-archives-policy">http://prov.vic.gov.au/community-programs/training/developing-an-archives-policy</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id28" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[19]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> Space data and information transfer systems &#8211; Open archival information system &#8211; Reference model <a class="reference external" href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=24683">http://www.iso.org/iso/catalogue_detail.htm?csnumber=24683</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id29" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id9">[20]</a></td><td>Fedora Repository Project <a class="reference external" href="http://www.fedora-commons.org/about">http://www.fedora-commons.org/about</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id30" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id8">[21]</a></td><td>DSpace  DSpace is the open software for building digital repositories. <a class="reference external" href="http://www.dspace.org/">http://www.dspace.org/</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id31" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[22]</td><td>The CLOCKSS Archive <a class="reference external" href="http://documents.clockss.org/index.php/Main_Page">http://documents.clockss.org/index.php/Main_Page</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id32" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[23]</td><td>The Open Archives Initiative Protocol for Metadata Harvesting <a class="reference external" href="http://www.openarchives.org/OAI/openarchivesprotocol.html">http://www.openarchives.org/OAI/openarchivesprotocol.html</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id33" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[24]</a></td><td>Dissemination of Microdata Files - Principles, Procedures and Practices <a class="reference external" href="http://ihsn.org/home/sites/default/files/resources/IHSN-WP005.pdf">http://ihsn.org/home/sites/default/files/resources/IHSN-WP005.pdf</a></td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="acknowledgements">
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Bruna Colarossi - former Director of Sovrintendenza Archivistica within the Italian Ministry of Culture</li>
+<li>Peter Horsman - Archive Sciences Professor at the University of Amsterdam and Government Consultant in relation to Archival Projects within the European Commission</li>
+<li>Thornton Staples</li>
+</ul>
+</div>
+<div class="section" id="author">
+<h2>Author<a class="headerlink" href="#author" title="Permalink to this headline">¶</a></h2>
+<p>Kamil Selwa</p>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="archive.html">archive package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="archive.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archive.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archive.html#module-archive.admin">archive.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archive.html#archive-models-module">archive.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archive.html#module-archive.tests">archive.tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="archive.html#module-archive">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="crawler.html">crawler package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="crawler.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crawler.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crawler.html#module-crawler.check_backup">crawler.check_backup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crawler.html#module-crawler.compute_hash">crawler.compute_hash module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crawler.html#module-crawler.crawler">crawler.crawler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crawler.html#module-crawler.hachoirparser">crawler.hachoirparser module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crawler.html#crawler-prod-check-backup-module">crawler.prod_check_backup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crawler.html#crawler-test-check-backup-module">crawler.test_check_backup module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crawler.html#module-crawler.tika_parser">crawler.tika_parser module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crawler.html#module-crawler">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="digital_archive.html">digital_archive package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="digital_archive.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="digital_archive.html#module-digital_archive.admin">digital_archive.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="digital_archive.html#module-digital_archive.models">digital_archive.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="digital_archive.html#module-digital_archive">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="drenpa.html">drenpa package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="drenpa.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drenpa.html#drenpa-email-settings-module">drenpa.email_settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drenpa.html#drenpa-local-settings-module">drenpa.local_settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drenpa.html#drenpa-settings-module">drenpa.settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drenpa.html#drenpa-urls-module">drenpa.urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drenpa.html#drenpa-wsgi-module">drenpa.wsgi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drenpa.html#module-contents">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">events package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="events.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html#module-events.admin">events.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html#events-models-module">events.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html#module-events.operations">events.operations module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html#module-events.urls">events.urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html#module-events.views">events.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html#module-events">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ingestion.html">ingestion package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ingestion.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingestion.html#module-ingestion.admin">ingestion.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingestion.html#module-ingestion.models">ingestion.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingestion.html#module-ingestion.views">ingestion.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ingestion.html#module-ingestion">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="physical_archive.html">physical_archive package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="physical_archive.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_archive.html#module-physical_archive.admin">physical_archive.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_archive.html#module-physical_archive.models">physical_archive.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_archive.html#physical-archive-views-module">physical_archive.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_archive.html#module-physical_archive">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="repository.html">repository package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="repository.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository.html#module-repository.admin">repository.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository.html#module-repository.forms">repository.forms module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository.html#module-repository.models">repository.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository.html#module-repository.tests">repository.tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository.html#module-repository.urls">repository.urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository.html#module-repository.views">repository.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="repository.html#module-repository">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">storage package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="storage.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage.html#module-storage.admin">storage.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage.html#module-storage.models">storage.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage.html#module-storage.tests">storage.tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage.html#module-storage.views">storage.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage.html#module-storage">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">DRENPA</a></h1>
+
+
+
+
+
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=&repo=&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="archive.html">archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawler.html">crawler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digital_archive.html">digital_archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drenpa.html">drenpa package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">events package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ingestion.html">ingestion package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physical_archive.html">physical_archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository.html">repository package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">storage package</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Shang Shung Fundation.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.2.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.6.3</a>
+      
+      |
+      <a href="_sources/index.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,38 @@
+physical_archive package
+========================
+
+Submodules
+----------
+
+physical_archive.admin module
+-----------------------------
+
+.. automodule:: physical_archive.admin
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+physical_archive.models module
+------------------------------
+
+.. automodule:: physical_archive.models
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+physical_archive.views module
+-----------------------------
+
+.. automodule:: physical_archive.views
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: physical_archive
+    :members:
+    :undoc-members:
+    :show-inheritance:

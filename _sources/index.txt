@@ -1,0 +1,359 @@
+.. . documentation master file, created by
+   sphinx-quickstart on Fri Feb 27 16:14:03 2015.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to TRENPA documentation!
+================================
+.. centered:: TRENPA |version| 
+
+TRENPA
+------
+
+**TRENPA** *(Tib. Memory དྲན་པ། )* is a software platform enabling management of acquisition, cataloguing, curating, preserving, dissemination access and collaboration for both physical and digital archive, with strong support for multimedia content.
+
+It follows the best archival practices and complies to ISO 14721:2003 [19]_
+
+Vocabulary
+----------
+
+Archive
+   An organization of people and systems that have accepted the responsibility to protect, retain, and preserve information and data and make it available for a Designated Communityâ€� Source: ISO 14721 [19]_
+
+Repository
+   Network accessible file server or cloud service
+
+Item
+   The object or "stuff" that metadata is "about" whether it is physical or digital. Each item has an identifier that is unique within the scope of the repository of which it is a constituent. Item basic properties relate to the Dublin Core scheme. 
+
+Collection
+   Assembly of items gathered by particular criteria. Collections may be hierarchical (one can belong to another) and heterogeneous (can contain different classes of items). One item may belong to various Collections. 
+
+Bundle
+   Assembly of items which, for particular reasons, have to be treated as a whole. Example: HTML page, consequent audio recordings, scanned pages of a book etc.
+
+Essence
+   Original item or the highest-quality representation of an item selected from various copies of the given item. 
+
+Protocol
+   Well defined list of steps and practices used to achieve a certain goal (ex: acquire a new archival item). 
+
+Policy
+   0fficial public statement that describes collection's [18]_:
+
+   * purpose
+   * why it collects
+   * what it collects
+   * what it does not collect
+   * who can use the material collected
+
+
+Person
+   Broad definition of an individual or an institution *(like in law jargon)*
+
+Consumer
+   The role played by those persons, or client systems, who interact with TRENPA services to find preserved information of interest and to access that information in detail.
+
+Acquisition
+   Process of accepting material into the archive. In TRENPA it refers to the physical items. 
+
+Ingestion
+   Acquisition of a digital item into the archive. In TRENPA it refers to the digital item which could be transformed (transcoded). 
+
+Digitalization
+   Ingestion of a file which is the result of digitalization of analogue media. 
+
+Dissemination
+   Making available an archived item to the Consumer. Item may be transformed (transcoded) to meet broadcast necessities. [24]_
+
+
+Purpose
+-------
+
+*TRENPA* is born from necessity to manage Shang Shung Institute physical and digital archives. 
+Most archival software addresses or physical or digital Archive (Fedora, DSpace). 
+In the multimedia library physical media get digitalized, so a bridge and mutual reference between physical and digital objects are necessary. 
+
+Since the biggest part of SSI Archive consist of multimedia items TRENPA contains specialized data models (Events) and functionality to support them. Most of digital repositories apply atomic approach to item metadata. It means that each item has self-contained metadata that fully describes it.
+It is possible in TRENPA too but we believe that important item information comes not only from items themselves but emerges from the network of relations between them.
+On a functional level this information is naturally contained by a relational database.
+SQL language operating relational databases is likely to stay for a foreseen future so if the database layout is clear, in the future it will be possible to retrieve information from it even if the current software is not there anymore.
+So, ultimately, a proper underlying database should be preserved in a trustworthy way (backups, replication). 
+
+TRENPA draws from the wealth of previous research and development in the area of digital library systems. Though not a full implementation, the TRENPA architecture has roots in Kahn and Wilenskyâ€™s Framework for Distributed Digital Object Services [7]_.
+
+
+Metadata
+--------
+
+.. image:: https://docs.google.com/drawings/d/151xCNr744f9vpALI7x7czYQeaUwvxGQjObDWUX1tIdk/pub?w=868&amp;h=730
+Trenpa Data Topology Diagram
+
+TRENPA endorses the widely accepted Dublin Core metadata scheme. In most cases items extend it with additional properties. 
+The Simple Dublin Core Metadata Element Set (DCMES) consists of 15 metadata elements: Title, Creator, Subject, Description, Publisher, Contributor, Date, Type, Format, Identifier, Source, Language, Relation, Coverage, Rights Implementations. 
+There are additional fields for keywords, and technical metadata and rights metadata, among others. 
+
+Broadly speaking, TRENPA holds three sorts of metadata about archived content:
+ Descriptive, administrative and structural metadata.
+
+**Descriptive Metadata**
+   Each Item has one qualified Dublin Core metadata record which is extended depending on class to which the item belongs. 
+
+**Administrative Metadata**
+   This includes preservation metadata, provenance and authorization policy data. 
+
+**Structural Metadata**
+   This includes information about how to present an item to an end-user, and the relationships between constituent parts of the item (Bundle). As an example, consider a thesis consisting of a number of TIFF images, each depicting a single page of the thesis. Structural metadata would include the fact that each image is a single page, and the ordering of the TIFF images/pages.
+   Relations with other items and a conceptual object (Event)  In the future TRENPA may comply to other metadata standards [16]_ like METS [10]_   Events ------ Event model is the highest level of Trenpa metadata organization. Each event data *'grosso modo'* answers four Ws: What? Where? When? Who?
+
+Event may be composed of other events, for example a festival event may have multiple concert “child” events: a press conference, a theatrical performance,  etc.
+This way even temporary, geographically despaired and complex events can be easily defined. The creation of overly complex events is not recommended. In most cases three levels of nested events should be enough.
+
+.. image:: https://docs.google.com/drawings/d/1EImitskwiMM_DqdvZ5wyWTpuxQbKdmWvro9pmE97qYU/pub?w=966&amp;h=688
+
+For example: An event video has been recorded on MiniDV and an audio recording has been made on magnetic tapes and, later on those tapes have been digitalized to audio/video files. All those items posses the same semantic charge. So instead of describing semantic metadata for each one of them, metadata resides on event abstraction to which they all relate. In this way all those items may automatically inherit metadata from it. 
+
+Event may posses time cues describing:
+
+* speech - literal quotes
+* semantic - tag describing the *topic* of a given scene
+* situational - describes a change of situation
+
+
+OAIS
+----
+
+Overall TRENPA architecture is based on the Consultative Committee for Space Data Systems Reference Model for an Open Archival Information System (OAIS). 
+OAIS is a reference model for long-term preservation of digital (and other) assets. While it does not specify the implementation or functional design, OAIS is an indispensable guide to creating an archive with an accepted set of roles, responsibilities and methods that encourage safe, long-term archival and access to critical government information.
+
+.. image:: https://docs.google.com/drawings/d/1Q_8j84-0s8zQewAQ2YIlIBd4jiyNM5AHBwka8cjK-5E/pub?w=968&amp;h=452
+
+Submission Information Package (SIP)
+   is the information sent from the producer to the archive
+Archival Information Package (AIP)
+   is the information stored by the archive
+Dissemination Information Package (DIP)
+   is the information sent to a user when requested
+
+OAIS benefits
+The OAIS reference model:
+
+* Is a well known and well understood model for long-term preservation. 
+* Provides the discipline necessary to maintain the accessibility of packages and the interpretation of the information they contain even across changes in technology and changes in representation standards. 
+* Clearly defines the roles of the actors (producers, consumers, managers) who interact with the archive. 
+* Identifies the necessary controls required to maintain reliable archive management. 
+* Identifies the documentation required to communicate the archiveâ€™s purpose and interactions to interested parties. 
+* Applies the chain of custody of archived packages to ensure that documents are not inappropriately tampered with. 
+
+<<<<<<< HEAD
+TRENPA Data Model
+-----------------
+
+.. image:: https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;h=686
+
+
+TRENPA System Architecture
+--------------------------
+
+.. image:: https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;h=720
+TRENPA Platform System Scheme
+
+The main code of TRENPA is implemented in Python, and runs on any UNIX-like system such as Linux,  BSD Unix or Mac. It may work on Windows but it has not been tested. 
+
+It makes use of several third-party open source systems: 
+
+* **PostgreSQL**, an open source relational database system 
+* **Django**, high level reach Python Framework 
+* **Server**: Apache, Ligh 
+* Other External Python and Django dependencies
+  
+=======
+>>>>>>> 41cc99e067c02101140fa6297c01567f9d6180ae
+General Characteristics
+-----------------------
+
+* Unicode support
+* Support for both Physical and Digital Archive
+* Flexible, hierarchical, heterogeneous collections
+* Dublin Core basic metadata
+* Imprecise dates
+* Event model for multimedia recording and other event related items (photos, etc.)
+* Support for distributed file repositories
+* Checksum for all files
+
+Functional Overview
+-------------------
+<<<<<<< HEAD
+The functional aspects of TRENPA can be summarized as follows:
+
+* A data model for basic organization of data is defined. 
+* Metadata  of various types is stored by the system. 
+* The system stores information about users of the system. Some users might not be humans but other computerized systems. 
+* While much of the effort is concerned with easing access to an institutionâ€™s digital material, simply allowing full public access is not always acceptable.  Additionally functions such as depositing and reviewing must be restricted to appropriate individuals. Hence the system includes an authorization function. 
+* All relevant actions on the archive content should be logged together with detailed description of resulting change. 
+* The system must be able to accept incoming material (ingestion). 
+* Some communities may require that material or accompanying metadata entering the archive be checked or augmented by designated individuals. This process is called work-flow. 
+* In order that material in the archive may be cited and accessed using information in a citation globally unique persistent identifiers are assigned to archived objects (â€˜itemsâ€™). 
+* End users should be able to explore and discover the contents of the repository. To this end, TRENPA must offer search and browse functions. 
+* TRENPA should enable diverse communities collaboration on ingestion, cataloguing, metadata enrichment (*crowd-sourcing*) together with tools for community moderation and content !!br0ken!! 
+* It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access TRENPA to check this. TRENPA should offer an automatic e-mail alerting service (subscription). 
+* A Web user interface provides access to the above functionality. 
+
+TRENPA Digital Platform Architecture
+=======
+
+The functional aspects of DRENPA can be summarized as follows:
+
+* A data model for basic organization of data is defined
+* Metadata of various types is stored by the system
+* The system stores information about users of the system. Some users might not be humans but other computerized systems
+* While much of the effort is concerned with easing access to an institution’s digital material, simply allowing full public access is not always acceptable. Additionally functions such as depositing and reviewing must be restricted to appropriate individuals. Hence the system includes an authorization function
+* All relevant actions on the archive content should be logged together with detailed description of resulting change
+* The system must be able to accept incoming material (ingestion)
+* Some communities may require that material or accompanying metadata entering the archive be checked or augmented by designated individuals. This process is called workflow
+* In order that material in the archive may be cited and accessed using information in a citation globally unique persistent identifiers are assigned to archived objects (‘items’).
+* End users should be able to explore and discover the contents of the repository. To this end, DRENPA must offer search and browse functions
+* DRENPA should enable diverse communities collaboration on ingestion, cataloging, metadata enrichment (*crowd-sourcing*) together with tools for community moderation and content curration.
+* It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access DRENPA to check this. DRENPA should offer an automatic e-mail alerting service (subscription)
+* A Web user interface provides access to the above functionality
+
+DRENPA Data Model
+-----------------
+
+.. image:: https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;h=686
+
+
+DRENPA System Architecture
+--------------------------
+
+.. image:: https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;h=720
+DRENPA Platform System Scheme
+
+The main code of DRENPA is implemented in Python, and runs on any UNIX-like system such as Linux,  BSD Unix or Mac. It may work on Windows but it is not tested.
+
+It makes use of several third-party open source systems:
+
+* **PostgreSQL**, an open source relational database system
+* **Django**, mature open source Python Framework
+* **Server**: Apache, LighHttp, etc
+* Other External Python and Django dependencies
+  
+
+DRENPA Digital Platform Architecture
+>>>>>>> 41cc99e067c02101140fa6297c01567f9d6180ae
+------------------------------------
+
+.. image:: https://docs.google.com/drawings/d/1MrMSM9nlXRq42VF9qyPA6SY6wL-dnseJ8eE7NUQHFzk/pub?w=796&amp;h=575
+
+TRENPA Digital Platform Architecture consist of:
+
+1. **Intranet**. Protected area where only authorized staff has access and can operate. It stores all archive items and its metadata. 
+
+   * **File Repository** - protected digital file storage/s where original files are stored.
+   * **Archive Master** - Master Postresql database. All physical and digital archive data is stored here. 
+   * **Job Queue** - Automatized bot executing programmed jobs on various components of the TRENPA platform.
+   * **Transcode Servers** - Dedicated servers for executing multimedia transcoding jobs. 
+   * **File Backup** - off site backup copy of 'File Repository' and 'Archive Master'. 
+   
+2. **Internet**. Area where defined communities can interact with archival content:
+
+   * **Archive Slave** - mirror copy of the Archive Master
+   * **Dissemination Repository** - File server or cloud storage serving disseminated copies of Items. 
+   * **Streaming Server** - Service allowing on-demand delivery of multimedia content to the customer. 
+   * **Payment Gateway** - Third Party Service processing payments for TRENPA services. 
+   * **CMS** - Content Management System - front-end exposing archive content to the customer. It allows discovery, navigation, submission and collaboration.  *(crowd sourcing)* on archival content. 
+
+
+Other Software
+--------------
+Must be mentioned that TRENPA is inspired and implements proved solutions which can be found in open source software like DSpace [21]_ or Fedora [20]_
+
+
+Papers/Research
+---------------
+
+.. [1] Arms, William Y.: Key Concepts in the Architecture of the Digital Library, D-Lib Magazine, July 1995. http://www.dlib.org/dlib/July95/07arms.html
+
+.. [2] Arms, William Y., Blanchi, Christophe, and Overly, Edward A.: An Architecture for Information in Digital Libraries, D-Lib Magazine, February 1997. http://www.dlib.org/dlib/february97/cnri/02arms1.html
+
+.. [3] Dublin Core Library Application Profile. http://dublincore.org/documents/2002/09/24/library-application-profile/
+
+.. [4] Publishing the Archive: Definitions and Typologies http://www.archivejournal.net/issue/4/archives-remixed/publishing-the-archive-definitions-and-typologies/
+
+.. [5] Long-Term Digital Retention and Preservation Reference Model http://www.ltdprm.org/reference-model/what-is-an-archive
+
+.. [6] Handle System Overview. http://www.ietf.org/internet-drafts/draft-sun-handle-system-10.txt
+
+.. [7] Kahn, Robert and Wilensky, Robert: A Framework for Distributed Digital Object Services, May 1995. http://www.cnri.reston.va.us/home/cstr/arch/k-w.html
+
+.. [8] Koehler, Wallace: Web Page Change and Persistence-A Four-Year Longitudinal Study. In the Journal of the American Society for Information Science and Technology 53, 2 (December 2001) 162â€”180.
+
+.. [9] Lagoze, C. and Hunter, J. â€œThe ABC Ontology and Modelâ€�, in Proceedings of the International Conference on Dublin Core and Metadata Applications 2001, Tokyo, 2001, 160-176.
+
+.. [10] Metadata Encoding and Transmission Standard (METS). http://www.loc.gov/standards/mets/
+
+.. [11] OCLC Research OAICat Open Source Project.http://www.oclc.org/research/software/oai/cat.shtm
+
+.. [12] Open Archives Initiative. http://www.openarchives.org/
+
+.. [13] Smith, MacKenzie, Barton, Mary, Bass, Mick, Branschofsky, Margret, MacClellan, Greg, Stuve, David, Tansley, Robert and Walker, Julie H: DSpace: An Open Source Dynamic Digital Repository. D-Lib Magazine 9, 1 (January 2003). http://www.dlib.org/dlib/january03/smith/01smith.html
+
+.. [14] Staples, Thornton and Wayland, Ross: Virginia Dons FEDORA: A Prototype for a Digital Object Repository. D-Lib Magazine 6, 7/8 (July/August 2000). http://www.dlib.org/dlib/july00/staples/07staples.html
+
+.. [15] http://www.securelyrooted.com/dpcmm/
+
+.. [16] http://en.wikibooks.org/wiki/Open_Metadata_Handbook/Metadata_Standards
+
+.. [17] OASIS http://www.iso.org/iso/catalogue_detail.htm?csnumber=57284
+
+.. [18] Developing an Archives Policy http://prov.vic.gov.au/community-programs/training/developing-an-archives-policy
+
+.. [19] Space data and information transfer systems -- Open archival information system -- Reference model http://www.iso.org/iso/catalogue_detail.htm?csnumber=24683
+
+.. [20] Fedora Repository Project http://www.fedora-commons.org/about
+
+.. [21] DSpace  DSpace is the open software for building digital repositories. http://www.dspace.org/
+
+.. [22] The CLOCKSS Archive http://documents.clockss.org/index.php/Main_Page
+
+.. [23] The Open Archives Initiative Protocol for Metadata Harvesting http://www.openarchives.org/OAI/openarchivesprotocol.html
+
+.. [24] Dissemination of Microdata Files - Principles, Procedures and Practices http://ihsn.org/home/sites/default/files/resources/IHSN-WP005.pdf
+
+
+Acknowledgements
+---------------
+
+* Bruna Colarossi - former Director of Sovrintendenza Archivistica within the Italian Ministry of Culture
+* Peter Horsman - Archive Sciences Professor at the University of Amsterdam and Government Consultant in relation to Archival Projects within the European Commission
+* Thornton Staples
+
+Author
+------
+
+Kamil Selwa
+
+
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   archive
+   crawler
+   digital_archive
+   drenpa
+   events
+   ingestion
+   physical_archive
+   repository
+   storage
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+

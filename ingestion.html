@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>ingestion package &mdash; DRENPA beta documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DRENPA beta documentation" href="index.html" />
+    <link rel="next" title="physical_archive package" href="physical_archive.html" />
+    <link rel="prev" title="events package" href="events.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="physical_archive.html" title="physical_archive package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="events.html" title="events package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">DRENPA beta documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ingestion-package">
+<h1>ingestion package<a class="headerlink" href="#ingestion-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ingestion.admin">
+<span id="ingestion-admin-module"></span><h2>ingestion.admin module<a class="headerlink" href="#module-ingestion.admin" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ingestion.admin.DigitalizedFileAdmin">
+<em class="property">class </em><tt class="descclassname">ingestion.admin.</tt><tt class="descname">DigitalizedFileAdmin</tt><big>(</big><em>parent_model</em>, <em>admin_site</em><big>)</big><a class="headerlink" href="#ingestion.admin.DigitalizedFileAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.contrib.admin.options.StackedInline</span></tt></p>
+<dl class="attribute">
+<dt id="ingestion.admin.DigitalizedFileAdmin.extra">
+<tt class="descname">extra</tt><em class="property"> = 1</em><a class="headerlink" href="#ingestion.admin.DigitalizedFileAdmin.extra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.admin.DigitalizedFileAdmin.media">
+<tt class="descname">media</tt><a class="headerlink" href="#ingestion.admin.DigitalizedFileAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.admin.DigitalizedFileAdmin.model">
+<tt class="descname">model</tt><a class="headerlink" href="#ingestion.admin.DigitalizedFileAdmin.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">MagneticMediaDigitalizationFile</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.admin.DigitalizedFileAdmin.raw_id_fields">
+<tt class="descname">raw_id_fields</tt><em class="property"> = ('event',)</em><a class="headerlink" href="#ingestion.admin.DigitalizedFileAdmin.raw_id_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ingestion.admin.MagneticMediaDigitalizationAdmin">
+<em class="property">class </em><tt class="descclassname">ingestion.admin.</tt><tt class="descname">MagneticMediaDigitalizationAdmin</tt><big>(</big><em>model</em>, <em>admin_site</em><big>)</big><a class="headerlink" href="#ingestion.admin.MagneticMediaDigitalizationAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.contrib.admin.options.ModelAdmin</span></tt></p>
+<dl class="attribute">
+<dt id="ingestion.admin.MagneticMediaDigitalizationAdmin.fieldsets">
+<tt class="descname">fieldsets</tt><em class="property"> = ((None, {'fields': ('ingestion_point', 'source', 'status', 'bundle_files')}), ('Errors', {'fields': ('error_1', 'error_2', 'error_3', 'error_4', 'error_5', 'error_6', 'error_7')}))</em><a class="headerlink" href="#ingestion.admin.MagneticMediaDigitalizationAdmin.fieldsets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.admin.MagneticMediaDigitalizationAdmin.inlines">
+<tt class="descname">inlines</tt><em class="property"> = [&lt;class 'ingestion.admin.DigitalizedFileAdmin'&gt;]</em><a class="headerlink" href="#ingestion.admin.MagneticMediaDigitalizationAdmin.inlines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.admin.MagneticMediaDigitalizationAdmin.list_display">
+<tt class="descname">list_display</tt><em class="property"> = ('__unicode__', 'status')</em><a class="headerlink" href="#ingestion.admin.MagneticMediaDigitalizationAdmin.list_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.admin.MagneticMediaDigitalizationAdmin.media">
+<tt class="descname">media</tt><a class="headerlink" href="#ingestion.admin.MagneticMediaDigitalizationAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.admin.MagneticMediaDigitalizationAdmin.raw_id_fields">
+<tt class="descname">raw_id_fields</tt><em class="property"> = ('source',)</em><a class="headerlink" href="#ingestion.admin.MagneticMediaDigitalizationAdmin.raw_id_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingestion.admin.MagneticMediaDigitalizationAdmin.save_model">
+<tt class="descname">save_model</tt><big>(</big><em>request</em>, <em>obj</em>, <em>form</em>, <em>change</em><big>)</big><a class="headerlink" href="#ingestion.admin.MagneticMediaDigitalizationAdmin.save_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ingestion.models">
+<span id="ingestion-models-module"></span><h2>ingestion.models module<a class="headerlink" href="#module-ingestion.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ingestion.models.AbstractIngestion">
+<em class="property">class </em><tt class="descclassname">ingestion.models.</tt><tt class="descname">AbstractIngestion</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.AbstractIngestion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Defines basic properties of ingestion proccess.</p>
+<dl class="class">
+<dt id="ingestion.models.AbstractIngestion.Meta">
+<em class="property">class </em><tt class="descname">Meta</tt><a class="headerlink" href="#ingestion.models.AbstractIngestion.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ingestion.models.AbstractIngestion.Meta.abstract">
+<tt class="descname">abstract</tt><em class="property"> = False</em><a class="headerlink" href="#ingestion.models.AbstractIngestion.Meta.abstract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="ingestion.models.AbstractIngestion.get_next_by_ingested_at">
+<tt class="descclassname">AbstractIngestion.</tt><tt class="descname">get_next_by_ingested_at</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.AbstractIngestion.get_next_by_ingested_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingestion.models.AbstractIngestion.get_previous_by_ingested_at">
+<tt class="descclassname">AbstractIngestion.</tt><tt class="descname">get_previous_by_ingested_at</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.AbstractIngestion.get_previous_by_ingested_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingestion.models.AbstractIngestion.get_status_display">
+<tt class="descclassname">AbstractIngestion.</tt><tt class="descname">get_status_display</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.AbstractIngestion.get_status_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.AbstractIngestion.ingested_by">
+<tt class="descclassname">AbstractIngestion.</tt><tt class="descname">ingested_by</tt><a class="headerlink" href="#ingestion.models.AbstractIngestion.ingested_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ingestion.models.AbstractIngestionFile">
+<em class="property">class </em><tt class="descclassname">ingestion.models.</tt><tt class="descname">AbstractIngestionFile</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.AbstractIngestionFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Defines basic properties of ingested_by file</p>
+<dl class="class">
+<dt id="ingestion.models.AbstractIngestionFile.Meta">
+<em class="property">class </em><tt class="descname">Meta</tt><a class="headerlink" href="#ingestion.models.AbstractIngestionFile.Meta" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="ingestion.models.AbstractIngestionFile.Meta.abstract">
+<tt class="descname">abstract</tt><em class="property"> = False</em><a class="headerlink" href="#ingestion.models.AbstractIngestionFile.Meta.abstract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.AbstractIngestionFile.event">
+<tt class="descclassname">AbstractIngestionFile.</tt><tt class="descname">event</tt><a class="headerlink" href="#ingestion.models.AbstractIngestionFile.event" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ingestion.models.DigitalIngestionFile">
+<em class="property">class </em><tt class="descclassname">ingestion.models.</tt><tt class="descname">DigitalIngestionFile</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.DigitalIngestionFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingestion.models.AbstractIngestionFile" title="ingestion.models.AbstractIngestionFile"><tt class="xref py py-class docutils literal"><span class="pre">ingestion.models.AbstractIngestionFile</span></tt></a></p>
+<p>Defines file which is result of ingestion</p>
+<dl class="exception">
+<dt id="ingestion.models.DigitalIngestionFile.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#ingestion.models.DigitalIngestionFile.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="ingestion.models.DigitalIngestionFile.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">DigitalIngestionFile.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#ingestion.models.DigitalIngestionFile.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.DigitalIngestionFile.event">
+<tt class="descclassname">DigitalIngestionFile.</tt><tt class="descname">event</tt><a class="headerlink" href="#ingestion.models.DigitalIngestionFile.event" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.DigitalIngestionFile.objects">
+<tt class="descclassname">DigitalIngestionFile.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aac1ac87b90&gt;</em><a class="headerlink" href="#ingestion.models.DigitalIngestionFile.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.DigitalIngestionFile.source">
+<tt class="descclassname">DigitalIngestionFile.</tt><tt class="descname">source</tt><a class="headerlink" href="#ingestion.models.DigitalIngestionFile.source" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ingestion.models.DigitalMediaIngestion">
+<em class="property">class </em><tt class="descclassname">ingestion.models.</tt><tt class="descname">DigitalMediaIngestion</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingestion.models.AbstractIngestion" title="ingestion.models.AbstractIngestion"><tt class="xref py py-class docutils literal"><span class="pre">ingestion.models.AbstractIngestion</span></tt></a></p>
+<p>Defines ingestion of files proceding form digital media.
+Stores title, content to be used later by Item</p>
+<dl class="exception">
+<dt id="ingestion.models.DigitalMediaIngestion.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="ingestion.models.DigitalMediaIngestion.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">DigitalMediaIngestion.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingestion.models.DigitalMediaIngestion.get_media_display">
+<tt class="descclassname">DigitalMediaIngestion.</tt><tt class="descname">get_media_display</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion.get_media_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingestion.models.DigitalMediaIngestion.get_next_by_ingested_at">
+<tt class="descclassname">DigitalMediaIngestion.</tt><tt class="descname">get_next_by_ingested_at</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion.get_next_by_ingested_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingestion.models.DigitalMediaIngestion.get_previous_by_ingested_at">
+<tt class="descclassname">DigitalMediaIngestion.</tt><tt class="descname">get_previous_by_ingested_at</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion.get_previous_by_ingested_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingestion.models.DigitalMediaIngestion.get_status_display">
+<tt class="descclassname">DigitalMediaIngestion.</tt><tt class="descname">get_status_display</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion.get_status_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.DigitalMediaIngestion.ingested_by">
+<tt class="descclassname">DigitalMediaIngestion.</tt><tt class="descname">ingested_by</tt><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion.ingested_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.DigitalMediaIngestion.objects">
+<tt class="descclassname">DigitalMediaIngestion.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aac1ac75f90&gt;</em><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.DigitalMediaIngestion.related_files">
+<tt class="descclassname">DigitalMediaIngestion.</tt><tt class="descname">related_files</tt><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion.related_files" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.DigitalMediaIngestion.tagged_items">
+<tt class="descclassname">DigitalMediaIngestion.</tt><tt class="descname">tagged_items</tt><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion.tagged_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple &#8220;remote&#8221; values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+&#8220;article.publications&#8221;, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.DigitalMediaIngestion.tags">
+<tt class="descclassname">DigitalMediaIngestion.</tt><tt class="descname">tags</tt><em class="property"> = &lt;taggit.managers._TaggableManager object at 0x2aabfc6016d0&gt;</em><a class="headerlink" href="#ingestion.models.DigitalMediaIngestion.tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ingestion.models.IngestionPoint">
+<em class="property">class </em><tt class="descclassname">ingestion.models.</tt><tt class="descname">IngestionPoint</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.IngestionPoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Location where incoming ingested files are stored</p>
+<dl class="exception">
+<dt id="ingestion.models.IngestionPoint.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#ingestion.models.IngestionPoint.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="ingestion.models.IngestionPoint.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">IngestionPoint.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#ingestion.models.IngestionPoint.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.IngestionPoint.ingestion_dir">
+<tt class="descclassname">IngestionPoint.</tt><tt class="descname">ingestion_dir</tt><a class="headerlink" href="#ingestion.models.IngestionPoint.ingestion_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ingestion storage path</p>
+<p>returns: str</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.IngestionPoint.objects">
+<tt class="descclassname">IngestionPoint.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aac1ac1c250&gt;</em><a class="headerlink" href="#ingestion.models.IngestionPoint.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.IngestionPoint.related_ingestionpoints">
+<tt class="descclassname">IngestionPoint.</tt><tt class="descname">related_ingestionpoints</tt><a class="headerlink" href="#ingestion.models.IngestionPoint.related_ingestionpoints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.IngestionPoint.storage">
+<tt class="descclassname">IngestionPoint.</tt><tt class="descname">storage</tt><a class="headerlink" href="#ingestion.models.IngestionPoint.storage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ingestion.models.MagneticMediaDigitalization">
+<em class="property">class </em><tt class="descclassname">ingestion.models.</tt><tt class="descname">MagneticMediaDigitalization</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalization" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingestion.models.AbstractIngestion" title="ingestion.models.AbstractIngestion"><tt class="xref py py-class docutils literal"><span class="pre">ingestion.models.AbstractIngestion</span></tt></a></p>
+<p>Defines source for digitalization, ingestion_point and
+eventual errors of ingestion process</p>
+<dl class="exception">
+<dt id="ingestion.models.MagneticMediaDigitalization.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalization.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="ingestion.models.MagneticMediaDigitalization.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">MagneticMediaDigitalization.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalization.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ingestion.models.MagneticMediaDigitalization.get_next_by_ingested_at">
+<tt class="descclassname">MagneticMediaDigitalization.</tt><tt class="descname">get_next_by_ingested_at</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalization.get_next_by_ingested_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingestion.models.MagneticMediaDigitalization.get_previous_by_ingested_at">
+<tt class="descclassname">MagneticMediaDigitalization.</tt><tt class="descname">get_previous_by_ingested_at</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalization.get_previous_by_ingested_at" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ingestion.models.MagneticMediaDigitalization.get_status_display">
+<tt class="descclassname">MagneticMediaDigitalization.</tt><tt class="descname">get_status_display</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalization.get_status_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.MagneticMediaDigitalization.ingested_by">
+<tt class="descclassname">MagneticMediaDigitalization.</tt><tt class="descname">ingested_by</tt><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalization.ingested_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.MagneticMediaDigitalization.ingestion_point">
+<tt class="descclassname">MagneticMediaDigitalization.</tt><tt class="descname">ingestion_point</tt><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalization.ingestion_point" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.MagneticMediaDigitalization.objects">
+<tt class="descclassname">MagneticMediaDigitalization.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aac1ac640d0&gt;</em><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalization.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.MagneticMediaDigitalization.related_files">
+<tt class="descclassname">MagneticMediaDigitalization.</tt><tt class="descname">related_files</tt><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalization.related_files" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.MagneticMediaDigitalization.source">
+<tt class="descclassname">MagneticMediaDigitalization.</tt><tt class="descname">source</tt><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalization.source" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ingestion.models.MagneticMediaDigitalizationFile">
+<em class="property">class </em><tt class="descclassname">ingestion.models.</tt><tt class="descname">MagneticMediaDigitalizationFile</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalizationFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ingestion.models.AbstractIngestionFile" title="ingestion.models.AbstractIngestionFile"><tt class="xref py py-class docutils literal"><span class="pre">ingestion.models.AbstractIngestionFile</span></tt></a></p>
+<p>Defines file which is result of digitalization process.
+Stores title, content to be used later by Item</p>
+<dl class="exception">
+<dt id="ingestion.models.MagneticMediaDigitalizationFile.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalizationFile.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="ingestion.models.MagneticMediaDigitalizationFile.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">MagneticMediaDigitalizationFile.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalizationFile.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.MagneticMediaDigitalizationFile.event">
+<tt class="descclassname">MagneticMediaDigitalizationFile.</tt><tt class="descname">event</tt><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalizationFile.event" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.MagneticMediaDigitalizationFile.objects">
+<tt class="descclassname">MagneticMediaDigitalizationFile.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aac1ac64310&gt;</em><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalizationFile.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.MagneticMediaDigitalizationFile.source">
+<tt class="descclassname">MagneticMediaDigitalizationFile.</tt><tt class="descname">source</tt><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalizationFile.source" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.MagneticMediaDigitalizationFile.tagged_items">
+<tt class="descclassname">MagneticMediaDigitalizationFile.</tt><tt class="descname">tagged_items</tt><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalizationFile.tagged_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class provides the functionality that makes the related-object
+managers available as attributes on a model class, for fields that have
+multiple &#8220;remote&#8221; values and have a GenericRelation defined in their model
+(rather than having another model pointed <em>at</em> them). In the example
+&#8220;article.publications&#8221;, the publications attribute is a
+ReverseGenericRelatedObjectsDescriptor instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ingestion.models.MagneticMediaDigitalizationFile.tags">
+<tt class="descclassname">MagneticMediaDigitalizationFile.</tt><tt class="descname">tags</tt><em class="property"> = &lt;taggit.managers._TaggableManager object at 0x2aabfc601990&gt;</em><a class="headerlink" href="#ingestion.models.MagneticMediaDigitalizationFile.tags" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ingestion.views">
+<span id="ingestion-views-module"></span><h2>ingestion.views module<a class="headerlink" href="#module-ingestion.views" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="ingestion.views.ingest_file">
+<tt class="descclassname">ingestion.views.</tt><tt class="descname">ingest_file</tt><big>(</big><em>file_path</em>, <em>file_name</em><big>)</big><a class="headerlink" href="#ingestion.views.ingest_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="ingestion.views.process_physical_media_ingestion">
+<tt class="descclassname">ingestion.views.</tt><tt class="descname">process_physical_media_ingestion</tt><big>(</big><em>ingestion_id</em><big>)</big><a class="headerlink" href="#ingestion.views.process_physical_media_ingestion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-ingestion">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ingestion" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">DRENPA</a></h1>
+
+
+
+
+
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=&repo=&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="archive.html">archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawler.html">crawler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digital_archive.html">digital_archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drenpa.html">drenpa package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">events package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">ingestion package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ingestion.admin">ingestion.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ingestion.models">ingestion.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ingestion.views">ingestion.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ingestion">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="physical_archive.html">physical_archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository.html">repository package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="storage.html">storage package</a></li>
+</ul>
+
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Shang Shung Fundation.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.2.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.6.3</a>
+      
+      |
+      <a href="_sources/ingestion.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>

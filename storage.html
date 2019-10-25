@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>storage package &mdash; DRENPA beta documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'beta',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="DRENPA beta documentation" href="index.html" />
+    <link rel="prev" title="repository package" href="repository.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="repository.html" title="repository package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">DRENPA beta documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="storage-package">
+<h1>storage package<a class="headerlink" href="#storage-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-storage.admin">
+<span id="storage-admin-module"></span><h2>storage.admin module<a class="headerlink" href="#module-storage.admin" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-storage.models">
+<span id="storage-models-module"></span><h2>storage.models module<a class="headerlink" href="#module-storage.models" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="storage.models.StorageLocation">
+<em class="property">class </em><tt class="descclassname">storage.models.</tt><tt class="descname">StorageLocation</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#storage.models.StorageLocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Defines physical archival storage location</p>
+<dl class="exception">
+<dt id="storage.models.StorageLocation.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#storage.models.StorageLocation.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="storage.models.StorageLocation.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">StorageLocation.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#storage.models.StorageLocation.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="storage.models.StorageLocation.objects">
+<tt class="descclassname">StorageLocation.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aac1acf6790&gt;</em><a class="headerlink" href="#storage.models.StorageLocation.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="storage.models.StorageUnit">
+<em class="property">class </em><tt class="descclassname">storage.models.</tt><tt class="descname">StorageUnit</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#storage.models.StorageUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.db.models.base.Model</span></tt></p>
+<p>Defines physical archival storage unit it location and properties</p>
+<dl class="exception">
+<dt id="storage.models.StorageUnit.DoesNotExist">
+<em class="property">exception </em><tt class="descname">DoesNotExist</tt><a class="headerlink" href="#storage.models.StorageUnit.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></tt></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="storage.models.StorageUnit.MultipleObjectsReturned">
+<em class="property">exception </em><tt class="descclassname">StorageUnit.</tt><tt class="descname">MultipleObjectsReturned</tt><a class="headerlink" href="#storage.models.StorageUnit.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></tt></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="storage.models.StorageUnit.get_unit_type_display">
+<tt class="descclassname">StorageUnit.</tt><tt class="descname">get_unit_type_display</tt><big>(</big><em>*moreargs</em>, <em>**morekwargs</em><big>)</big><a class="headerlink" href="#storage.models.StorageUnit.get_unit_type_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="storage.models.StorageUnit.objects">
+<tt class="descclassname">StorageUnit.</tt><tt class="descname">objects</tt><em class="property"> = &lt;django.db.models.manager.Manager object at 0x2aac1ac87750&gt;</em><a class="headerlink" href="#storage.models.StorageUnit.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-storage.tests">
+<span id="storage-tests-module"></span><h2>storage.tests module<a class="headerlink" href="#module-storage.tests" title="Permalink to this headline">¶</a></h2>
+<p>This file demonstrates writing tests using the unittest module. These will pass
+when you run &#8220;manage.py test&#8221;.</p>
+<p>Replace this with more appropriate tests for your application.</p>
+<dl class="class">
+<dt id="storage.tests.SimpleTest">
+<em class="property">class </em><tt class="descclassname">storage.tests.</tt><tt class="descname">SimpleTest</tt><big>(</big><em>methodName='runTest'</em><big>)</big><a class="headerlink" href="#storage.tests.SimpleTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">django.test.testcases.TestCase</span></tt></p>
+<dl class="method">
+<dt id="storage.tests.SimpleTest.test_basic_addition">
+<tt class="descname">test_basic_addition</tt><big>(</big><big>)</big><a class="headerlink" href="#storage.tests.SimpleTest.test_basic_addition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tests that 1 + 1 always equals 2.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-storage.views">
+<span id="storage-views-module"></span><h2>storage.views module<a class="headerlink" href="#module-storage.views" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-storage">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-storage" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">DRENPA</a></h1>
+
+
+
+
+
+<p>
+<iframe src="http://ghbtns.com/github-btn.html?user=&repo=&type=watch&count=true&size=large"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="archive.html">archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crawler.html">crawler package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="digital_archive.html">digital_archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="drenpa.html">drenpa package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">events package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ingestion.html">ingestion package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physical_archive.html">physical_archive package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="repository.html">repository package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">storage package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-storage.admin">storage.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-storage.models">storage.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-storage.tests">storage.tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-storage.views">storage.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-storage">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Shang Shung Fundation.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.2.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.6.3</a>
+      
+      |
+      <a href="_sources/storage.txt"
+          rel="nofollow">Page source</a></li>
+    </div>
+
+    
+
+    
+  </body>
+</html>
