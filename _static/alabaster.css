@@ -338,9 +338,6 @@ pre, tt, code {
     display: block;
 }
 
-img.screenshot {
-}
-
 tt.descname, tt.descclassname, code.descname, code.descclassname {
     font-size: 0.95em;
 }
