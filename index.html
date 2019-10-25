@@ -59,6 +59,7 @@
 <h2>TRENPA<a class="headerlink" href="#trenpa" title="Permalink to this headline">¶</a></h2>
 <p><strong>TRENPA</strong> <em>(Tib. Memory དྲན་པ། )</em> is a software platform enabling management of acquisition, cataloguing, curating, preserving, dissemination access and collaboration for both physical and digital archive, with strong support for multimedia content.</p>
 <p>It follows the best archival practices and complies to ISO 14721:2003 <a class="footnote-reference" href="#id28" id="id1">[19]</a></p>
+<p>Once its finished it will be published as Open Source with some liberal licence</p>
 </div>
 <div class="section" id="vocabulary">
 <h2>Vocabulary<a class="headerlink" href="#vocabulary" title="Permalink to this headline">¶</a></h2>
@@ -114,9 +115,41 @@ So, ultimately, a proper underlying database should be preserved in a trustworth
 <p>TRENPA draws from the wealth of previous research and development in the area of digital library systems. Though not a full implementation, the TRENPA architecture has roots in Kahn and Wilenskyâ€™s Framework for Distributed Digital Object Services <a class="footnote-reference" href="#id16" id="id5">[7]</a>.</p>
 </div>
 <div class="section" id="metadata">
+  <h2>History</h2>
+  <p>The idea of Trempa born during The Digital Preservation of Cultural Heritage – Towards Best Practice March 2013 in Arcidosso organised by SSF directed by Alex Siedlecki.
+  At conference  prominent academics and developers from all over the world met to discuss current technological advances on islandora digital archive system.</p>
+  
+  <p>Since current digital archive systems are concentrated on exposing particular object event centric approach seems more suited for multimedia recordings of particular event. In similar fasshon there is the trend to express metadata in atomic way. In event centric approach in contrary relation between metadata plays a central role.
+  </p>
+  Workshops (October 2013) with Bruna Calorosi (Director within the Italian Government Department of State Archives) and Peter Horshman (Archive Sciences Professor at the University of Amsterdam and Government Consultant in relation to Archival Projects within the European Commission) gave valuable professional and academic input to shape further development of Trenpa.
+</p>
+  
+<p>
+  Since SSF had in possession thousands of analog records and many of them counting many years they volatility (demagnetization and erosion of support) become serious threat. SSF management recognized this issue and organized team of persons dedicated to digitize, catalog and preserve the content. Therefore in first place special ingestion interfaces was developed in Trenpa.
+</p>
+  In 2016 Rinpoche ordered to place all archival items related to his teaching in the Stupa of Merigar. This created urgency to catalog and separate all physical and digital items. Color classification was established to facilitate it. Trempa was further modified to streamline this work
+  </p>
+  <p>
+    In 2017 we had another workshop with Bruna Calorosi and Peter Horshman in which result trapa incorporated Correspondence Protocol System and particularry it's calssification scheme to unify and normalize calssification across difrent systems and organizations.
+    https://github.com/ShangShungFoundation/protocol
+  </p>
+  <p>In april 2018 development was halted till now.</p>
+</div>
+<div class="section" id="metadata">
+  <h2>Future</h2>
+  <p>Trempa still has a lot of areas to develop and improve. There have to be develop public interfaces where items can be discovered, searched (with different degrees of access levels)
+Important would be too extending administrative metadata with contractual management subsystem which will regulate ownership and publication permissions based on contracts.</p>
+
+<p>Opening public interfaces offers possibility for crowdsourcing of metadata in order to improve it (with metadata versioning and moderation supervision)  and direct ingestion of new digital items submitted by the public</p>
+
+<p>Another very interesting development would be incorporation of machine learning and NLP to classify material. Of course results will have to be moderated. Development that could save thousands of watching/listening hours.</p>
+
+<p>Due to its unique aproach Trempa can be usefull for other organizations dealing with multimedia items. Therefore releasing it as Open Source could benefit them and open possibility for collaboration on further improvements</p>
+</div>
+<div class="section" id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
 <img alt="https://docs.google.com/drawings/d/151xCNr744f9vpALI7x7czYQeaUwvxGQjObDWUX1tIdk/pub?w=868&amp;amp;h=730" src="https://docs.google.com/drawings/d/151xCNr744f9vpALI7x7czYQeaUwvxGQjObDWUX1tIdk/pub?w=868&amp;amp;h=730" />
-<p>Trenpa Data Topology Diagram</p>
+<p>Trenpa Data Topology Diagram. It coresponds too to internal class inherinace</p>
 <p>TRENPA endorses the widely accepted Dublin Core metadata scheme. In most cases items extend it with additional properties.
 The Simple Dublin Core Metadata Element Set (DCMES) consists of 15 metadata elements: Title, Creator, Subject, Description, Publisher, Contributor, Date, Type, Format, Identifier, Source, Language, Relation, Coverage, Rights Implementations.
 There are additional fields for keywords, and technical metadata and rights metadata, among others.</p>
@@ -165,9 +198,9 @@ The OAIS reference model:</p>
 <li>Identifies the documentation required to communicate the archiveâ€™s purpose and interactions to interested parties.</li>
 <li>Applies the chain of custody of archived packages to ensure that documents are not inappropriately tampered with.</li>
 </ul>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<p>
 TRENPA Data Model
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;</p>
+</p>
 <img alt="https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;amp;h=686" src="https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;amp;h=686" />
 </div>
 <div class="section" id="trenpa-system-architecture">
@@ -196,7 +229,7 @@ TRENPA Data Model
 </div>
 <div class="section" id="functional-overview">
 <h2>Functional Overview<a class="headerlink" href="#functional-overview" title="Permalink to this headline">¶</a></h2>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<p
 The functional aspects of TRENPA can be summarized as follows:</p>
 <ul class="simple">
 <li>A data model for basic organization of data is defined.</li>
@@ -239,17 +272,18 @@ The functional aspects of TRENPA can be summarized as follows:</p>
 <h2>Trenpa System Architecture<a class="headerlink" href="#Trenpa-system-architecture" title="Permalink to this headline">¶</a></h2>
 <img alt="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" src="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" />
 <p>Trenpa Platform System Scheme</p>
-<p>The main code of Trenpa is implemented in Python, and runs on any UNIX-like system such as Linux,  BSD Unix or Mac. It may work on Windows but it is not tested.</p>
+<p>The main code of Trenpa is implemented in Python, and runs on any UNIX-like system such as Linux, BSD Unix or Mac. It may work on Windows but it is not tested.</p>
 <p>It makes use of several third-party open source systems:</p>
 <ul class="simple">
 <li><strong>PostgreSQL</strong>, an open source relational database system</li>
 <li><strong>Django</strong>, mature open source Python Framework</li>
 <li><strong>Server</strong>: Apache, LighHttp, etc</li>
-<li>Other External Python and Django dependencies</li>
 </ul>
-<p>Trenpa Digital Platform Architecture
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; 41cc99e067c02101140fa6297c01567f9d6180ae
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</p>
+<p>It’s important to state that trenpa at this moment do not expose any files in internet it only works with metadata. For practical, financial and security reasons all ara is stored in two IDM  servers in merigar with very limited access. It would be financially prohibitive to pay for storing 70TB of data in any cloud storage. Not mentioning exposing it to unnecessary risk of unauthorized access, leak etc.
+</p>
+<p>If stakeholders will find id opportune it’s possible to develop delivery service which on demand can transcode multimedia material, publish it to the trenpa internet repository. 
+  Process this could be offered for free or can have small single fee (or monthly sunscription fee).</p>
+<p>Proposal of Trenpa Digital Platform Architecture</p>
 <img alt="https://docs.google.com/drawings/d/1MrMSM9nlXRq42VF9qyPA6SY6wL-dnseJ8eE7NUQHFzk/pub?w=796&amp;amp;h=575" src="https://docs.google.com/drawings/d/1MrMSM9nlXRq42VF9qyPA6SY6wL-dnseJ8eE7NUQHFzk/pub?w=796&amp;amp;h=575" />
 <p>TRENPA Digital Platform Architecture consist of:</p>
 <ol class="arabic simple">
