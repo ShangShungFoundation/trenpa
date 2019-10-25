@@ -65,7 +65,7 @@
 <h2>Vocabulary<a class="headerlink" href="#vocabulary" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>Archive</dt>
-<dd>An organization of people and systems that have accepted the responsibility to protect, retain, and preserve information and data and make it available for a Designated Communityâ€� Source: ISO 14721 <a class="footnote-reference" href="#id28" id="id2">[19]</a></dd>
+<dd>An organization of people and systems that have accepted the responsibility to protect, retain, and preserve information and data and make it available for a Designated Community. Source: ISO 14721 <a class="footnote-reference" href="#id28" id="id2">[19]</a></dd>
 <dt>Repository</dt>
 <dd>Network accessible file server or cloud service</dd>
 <dt>Item</dt>
@@ -112,7 +112,7 @@ It is possible in TRENPA too but we believe that important item information come
 On a functional level this information is naturally contained by a relational database.
 SQL language operating relational databases is likely to stay for a foreseen future so if the database layout is clear, in the future it will be possible to retrieve information from it even if the current software is not there anymore.
 So, ultimately, a proper underlying database should be preserved in a trustworthy way (backups, replication).</p>
-<p>TRENPA draws from the wealth of previous research and development in the area of digital library systems. Though not a full implementation, the TRENPA architecture has roots in Kahn and Wilenskyâ€™s Framework for Distributed Digital Object Services <a class="footnote-reference" href="#id16" id="id5">[7]</a>.</p>
+<p>TRENPA draws from the wealth of previous research and development in the area of digital library systems. Though not a full implementation, the TRENPA architecture has roots in Kahn and Wilensky"s Framework for Distributed Digital Object Services <a class="footnote-reference" href="#id16" id="id5">[7]</a>.</p>
 </div>
 <div class="section" id="metadata">
   <h2>History</h2>
@@ -138,9 +138,9 @@ So, ultimately, a proper underlying database should be preserved in a trustworth
 <div class="section" id="metadata">
   <h2>Future</h2>
   <p>Trempa still has a lot of areas to develop and improve. There have to be develop public interfaces where items can be discovered, searched (with different degrees of access levels)
-Important would be too extending administrative metadata with contractual management subsystem which will regulate ownership and publication permissions based on contracts.</p>
+Important would be too extending administrative metadata with contractual management subsystem which will regulate ownership and publication/disemination permissions levels based on actuall contracts.</p>
 
-<p>Opening public interfaces offers possibility for crowdsourcing of metadata in order to improve it (with metadata versioning and moderation supervision)  and direct ingestion of new digital items submitted by the public</p>
+<p>Opening public interfaces offers possibility for crowdsourcing of metadata in order to improve it (together with metadata versioning and moderation supervision) and direct ingestion of new digital items submitted by the public</p>
 
 <p>Another very interesting development would be incorporation of machine learning and NLP to classify material. Of course results will have to be moderated. Development that could save thousands of watching/listening hours.</p>
 
@@ -195,22 +195,13 @@ The OAIS reference model:</p>
 <li>Provides the discipline necessary to maintain the accessibility of packages and the interpretation of the information they contain even across changes in technology and changes in representation standards.</li>
 <li>Clearly defines the roles of the actors (producers, consumers, managers) who interact with the archive.</li>
 <li>Identifies the necessary controls required to maintain reliable archive management.</li>
-<li>Identifies the documentation required to communicate the archiveâ€™s purpose and interactions to interested parties.</li>
+<li>Identifies the documentation required to communicate the archive"s purpose and interactions to interested parties.</li>
 <li>Applies the chain of custody of archived packages to ensure that documents are not inappropriately tampered with.</li>
 </ul>
-<p>
-TRENPA Data Model
-</p>
-<img alt="https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;amp;h=686" src="https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;amp;h=686" />
-</div>
-<div class="section" id="trenpa-system-architecture">
-<h2>TRENPA System Architecture<a class="headerlink" href="#trenpa-system-architecture" title="Permalink to this headline">¶</a></h2>
-<img alt="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" src="https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;amp;h=720" />
-<p>TRENPA Platform System Scheme</p>
 <p>The main code of TRENPA is implemented in Python, and runs on any UNIX-like system such as Linux,  BSD Unix or Mac. It may work on Windows but it has not been tested.</p>
 <p>It makes use of several third-party open source systems:</p>
 <ul class="simple">
-<li><strong><a href="https://www.postgresql.org/">PostgreSQL</a></strong>, very robust, feature reach, open source relational database system</li>
+<li><strong><a href="https://www.postgresql.org/">PostgreSQL</a></strong>, very robust, feature reach,  open source relational database system</li>
 <li><strong><a href="https://www.djangoproject.com/">Django</a></strong>, well established Python Framework following MVC paradigm</li>
 <li><strong>Server</strong>: <a href="https://www.nginx.com/">Nginx</a></li>
 </ul>
@@ -234,11 +225,11 @@ The functional aspects of TRENPA can be summarized as follows:</p>
 <li>A data model for basic organization of data is defined.</li>
 <li>Metadata  of various types is stored by the system.</li>
 <li>The system stores information about users of the system. Some users might not be humans but other computerized systems.</li>
-<li>While much of the effort is concerned with easing access to an institutionâ€™s digital material, simply allowing full public access is not always acceptable.  Additionally functions such as depositing and reviewing must be restricted to appropriate individuals. Hence the system includes an authorization function.</li>
+<li>While much of the effort is concerned with easing access to an institution"s digital material, simply allowing full public access is not always acceptable.  Additionally functions such as depositing and reviewing must be restricted to appropriate individuals. Hence the system includes an authorization function.</li>
 <li>All relevant actions on the archive content should be logged together with detailed description of resulting change.</li>
 <li>The system must be able to accept incoming material (ingestion).</li>
 <li>Some communities may require that material or accompanying metadata entering the archive be checked or augmented by designated individuals. This process is called work-flow.</li>
-<li>In order that material in the archive may be cited and accessed using information in a citation globally unique persistent identifiers are assigned to archived objects (â€˜itemsâ€™).</li>
+<li>In order that material in the archive may be cited and accessed using information in a citation globally unique persistent identifiers are assigned to archived objects ("items").</li>
 <li>End users should be able to explore and discover the contents of the repository. To this end, TRENPA must offer search and browse functions.</li>
 <li>TRENPA should enable diverse communities collaboration on ingestion, cataloguing, metadata enrichment (<em>crowd-sourcing</em>) together with tools for community moderation and content !!br0ken!!</li>
 <li>It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access TRENPA to check this. TRENPA should offer an automatic e-mail alerting service (subscription).</li>
@@ -355,13 +346,13 @@ The functional aspects of TRENPA can be summarized as follows:</p>
 <table class="docutils footnote" frame="void" id="id17" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[8]</td><td>Koehler, Wallace: Web Page Change and Persistence-A Four-Year Longitudinal Study. In the Journal of the American Society for Information Science and Technology 53, 2 (December 2001) 162â€”180.</td></tr>
+<tr><td class="label">[8]</td><td>Koehler, Wallace: Web Page Change and Persistence-A Four-Year Longitudinal Study. In the Journal of the American Society for Information Science and Technology 53, 2 (December 2001) 162 ”180.</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="id18" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[9]</td><td>Lagoze, C. and Hunter, J. â€œThe ABC Ontology and Modelâ€�, in Proceedings of the International Conference on Dublin Core and Metadata Applications 2001, Tokyo, 2001, 160-176.</td></tr>
+<tr><td class="label">[9]</td><td>Lagoze, C. and Hunter, J. "The ABC Ontology and Model", in Proceedings of the International Conference on Dublin Core and Metadata Applications 2001, Tokyo, 2001, 160-176.</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="id19" rules="none">
