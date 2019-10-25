@@ -202,7 +202,7 @@ The functional aspects of TRENPA can be summarized as follows:
 TRENPA Digital Platform Architecture
 =======
 
-The functional aspects of DRENPA can be summarized as follows:
+The functional aspects of Trenpa can be summarized as follows:
 
 * A data model for basic organization of data is defined
 * Metadata of various types is stored by the system
@@ -212,24 +212,24 @@ The functional aspects of DRENPA can be summarized as follows:
 * The system must be able to accept incoming material (ingestion)
 * Some communities may require that material or accompanying metadata entering the archive be checked or augmented by designated individuals. This process is called workflow
 * In order that material in the archive may be cited and accessed using information in a citation globally unique persistent identifiers are assigned to archived objects (‘items’).
-* End users should be able to explore and discover the contents of the repository. To this end, DRENPA must offer search and browse functions
-* DRENPA should enable diverse communities collaboration on ingestion, cataloging, metadata enrichment (*crowd-sourcing*) together with tools for community moderation and content curration.
-* It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access DRENPA to check this. DRENPA should offer an automatic e-mail alerting service (subscription)
+* End users should be able to explore and discover the contents of the repository. To this end, Trenpa must offer search and browse functions
+* Trenpa should enable diverse communities collaboration on ingestion, cataloging, metadata enrichment (*crowd-sourcing*) together with tools for community moderation and content curration.
+* It should be possible to notify end users of the system when new content of interest to them appears in the archive, rather than requiring them to repeatedly access Trenpa to check this. Trenpa should offer an automatic e-mail alerting service (subscription)
 * A Web user interface provides access to the above functionality
 
-DRENPA Data Model
+Trenpa Data Model
 -----------------
 
 .. image:: https://docs.google.com/drawings/d/1VoPMuOl7ck9POkR2Ngc_m0nWLebLEEZkfTO9YiOO0dM/pub?w=934&amp;h=686
 
 
-DRENPA System Architecture
+Trenpa System Architecture
 --------------------------
 
 .. image:: https://docs.google.com/drawings/d/1VszGb4t6LAm3g6H931aQgtH1hPA9A3mOOUm0Imm2e2k/pub?w=960&amp;h=720
-DRENPA Platform System Scheme
+Trenpa Platform System Scheme
 
-The main code of DRENPA is implemented in Python, and runs on any UNIX-like system such as Linux,  BSD Unix or Mac. It may work on Windows but it is not tested.
+The main code of Trenpa is implemented in Python, and runs on any UNIX-like system such as Linux,  BSD Unix or Mac. It may work on Windows but it is not tested.
 
 It makes use of several third-party open source systems:
 
@@ -239,7 +239,7 @@ It makes use of several third-party open source systems:
 * Other External Python and Django dependencies
   
 
-DRENPA Digital Platform Architecture
+Trenpa Digital Platform Architecture
 >>>>>>> 41cc99e067c02101140fa6297c01567f9d6180ae
 ------------------------------------
 
@@ -342,7 +342,7 @@ Contents:
    archive
    crawler
    digital_archive
-   drenpa
+   Trenpa
    events
    ingestion
    physical_archive

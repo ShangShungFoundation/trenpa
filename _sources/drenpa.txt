@@ -1,45 +1,45 @@
-drenpa package
+Trenpa package
 ==============
 
 Submodules
 ----------
 
-drenpa.email_settings module
+Trenpa.email_settings module
 ----------------------------
 
-.. automodule:: drenpa.email_settings
+.. automodule:: Trenpa.email_settings
     :members:
     :undoc-members:
     :show-inheritance:
 
-drenpa.local_settings module
+Trenpa.local_settings module
 ----------------------------
 
-.. automodule:: drenpa.local_settings
+.. automodule:: Trenpa.local_settings
     :members:
     :undoc-members:
     :show-inheritance:
 
-drenpa.settings module
+Trenpa.settings module
 ----------------------
 
-.. automodule:: drenpa.settings
+.. automodule:: Trenpa.settings
     :members:
     :undoc-members:
     :show-inheritance:
 
-drenpa.urls module
+Trenpa.urls module
 ------------------
 
-.. automodule:: drenpa.urls
+.. automodule:: Trenpa.urls
     :members:
     :undoc-members:
     :show-inheritance:
 
-drenpa.wsgi module
+Trenpa.wsgi module
 ------------------
 
-.. automodule:: drenpa.wsgi
+.. automodule:: Trenpa.wsgi
     :members:
     :undoc-members:
     :show-inheritance:
@@ -48,7 +48,7 @@ drenpa.wsgi module
 Module contents
 ---------------
 
-.. automodule:: drenpa
+.. automodule:: Trenpa
     :members:
     :undoc-members:
     :show-inheritance:
